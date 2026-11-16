@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderOrderDetailsVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptButton" destination="POD-accept-btn" id="POD-accept-conn"/>
+                <outlet property="acceptRejectStackView" destination="It3-dd-6Oh" id="1Mi-s1-gzg"/>
+                <outlet property="cancelReasonView" destination="POD-cancel-reason" id="POD-cr-conn"/>
+                <outlet property="dateLabel" destination="POD-date-lbl" id="POD-date-conn"/>
+                <outlet property="delegateInfoView" destination="POD-delegate-info" id="POD-di-conn"/>
+                <outlet property="finishButton" destination="POD-finish-btn" id="POD-finish-conn"/>
+                <outlet property="orderNumberLabel" destination="POD-orderNum" id="POD-on-conn"/>
+                <outlet property="orderSummaryView" destination="POD-summary" id="POD-summary-conn"/>
+                <outlet property="refuseButton" destination="POD-refuse-btn" id="POD-refuse-conn"/>
+                <outlet property="scrollView" destination="POD-scroll" id="POD-scroll-conn"/>
+                <outlet property="timeLabel" destination="POD-time-lbl" id="POD-time-conn"/>
+                <outlet property="view" destination="POD-root" id="POD-root-conn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="POD-root">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POD-scroll">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="POD-container" userLabel="ContainerStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="571.33333333333337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب رقم 84521" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POD-orderNum">
+                                    <rect key="frame" x="16" y="15.999999999999998" width="361" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POD-dt-stk" userLabel="OrderDateStackView">
+                                    <rect key="frame" x="16" y="51.333333333333343" width="360.33333333333331" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="176" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="POD-date-vw" userLabel="DateView">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POD-date-stk" userLabel="DateStackView">
+                                                    <rect key="frame" x="8" y="8" width="160" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-01" translatesAutoresizingMaskIntoConstraints="NO" id="POD-date-img">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="POD-d-img-h"/>
+                                                                <constraint firstAttribute="width" constant="16" id="POD-d-img-w"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POD-date-lbl" userLabel="dateLabel">
+                                                            <rect key="frame" x="24" y="0.0" width="136" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="POD-date-stk" secondAttribute="bottom" constant="8" id="POD-d-b"/>
+                                                <constraint firstItem="POD-date-stk" firstAttribute="leading" secondItem="POD-date-vw" secondAttribute="leading" constant="8" id="POD-d-l"/>
+                                                <constraint firstItem="POD-date-stk" firstAttribute="top" secondItem="POD-date-vw" secondAttribute="top" constant="8" id="POD-d-t"/>
+                                                <constraint firstAttribute="trailing" secondItem="POD-date-stk" secondAttribute="trailing" constant="8" id="POD-d-tr"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POD-time-vw" userLabel="TimeView">
+                                            <rect key="frame" x="184" y="0.0" width="176.33333333333337" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="POD-time-stk" userLabel="TimeStackView">
+                                                    <rect key="frame" x="8" y="8" width="160.33333333333334" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-03" translatesAutoresizingMaskIntoConstraints="NO" id="POD-time-img">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="POD-t-img-h"/>
+                                                                <constraint firstAttribute="width" constant="16" id="POD-t-img-w"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POD-time-lbl" userLabel="timeLabel">
+                                                            <rect key="frame" x="24" y="0.0" width="136.33333333333334" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="POD-time-stk" secondAttribute="bottom" constant="8" id="POD-t-b"/>
+                                                <constraint firstItem="POD-time-stk" firstAttribute="leading" secondItem="POD-time-vw" secondAttribute="leading" constant="8" id="POD-t-l"/>
+                                                <constraint firstItem="POD-time-stk" firstAttribute="top" secondItem="POD-time-vw" secondAttribute="top" constant="8" id="POD-t-t"/>
+                                                <constraint firstAttribute="trailing" secondItem="POD-time-stk" secondAttribute="trailing" constant="8" id="POD-t-tr"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="POD-summary" customClass="OrderSummaryView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="99.333333333333343" width="361" height="200.00000000000003"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="POD-cancel-reason" customClass="LabeledNoteView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="307.33333333333331" width="361" height="0.0"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="POD-delegate-info" customClass="DelegateInfoView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="315.33333333333331" width="361" height="120"/>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="It3-dd-6Oh" userLabel="acceptRejectStackView">
+                                    <rect key="frame" x="16" y="451.33333333333337" width="361" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POD-accept-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="POD-accept-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="accept"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="accept"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapAccept:" destination="-1" eventType="touchUpInside" id="POD-accept-act"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POD-refuse-btn" customClass="RedButton" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="POD-refuse-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="reject"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="reject"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapRefuse:" destination="-1" eventType="touchUpInside" id="POD-refuse-act"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POD-finish-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="511.33333333333337" width="361" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="POD-finish-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="finish_order"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="finish_order"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapFinish:" destination="-1" eventType="touchUpInside" id="POD-finish-act"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="POD-cancel-reason" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="POD-cr-l"/>
+                                <constraint firstAttribute="trailing" secondItem="POD-cancel-reason" secondAttribute="trailing" constant="16" id="POD-cr-tr"/>
+                                <constraint firstItem="POD-delegate-info" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="POD-di-l"/>
+                                <constraint firstAttribute="trailing" secondItem="POD-delegate-info" secondAttribute="trailing" constant="16" id="POD-di-tr"/>
+                                <constraint firstItem="POD-finish-btn" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="POD-fb-l"/>
+                                <constraint firstAttribute="trailing" secondItem="POD-finish-btn" secondAttribute="trailing" constant="16" id="POD-fb-tr"/>
+                                <constraint firstItem="POD-orderNum" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="POD-on-l"/>
+                                <constraint firstAttribute="trailing" secondItem="POD-orderNum" secondAttribute="trailing" constant="16" id="POD-on-tr"/>
+                                <constraint firstItem="POD-summary" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="POD-su-l"/>
+                                <constraint firstAttribute="trailing" secondItem="POD-summary" secondAttribute="trailing" constant="16" id="POD-su-tr"/>
+                                <constraint firstAttribute="trailing" secondItem="It3-dd-6Oh" secondAttribute="trailing" constant="16" id="ume-no-2Gw"/>
+                                <constraint firstItem="It3-dd-6Oh" firstAttribute="leading" secondItem="POD-container" secondAttribute="leading" constant="16" id="zcu-1c-lI0"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="POD-container" firstAttribute="bottom" secondItem="POD-sg" secondAttribute="bottom" id="POD-co-b"/>
+                        <constraint firstItem="POD-container" firstAttribute="leading" secondItem="POD-sg" secondAttribute="leading" id="POD-co-l"/>
+                        <constraint firstItem="POD-container" firstAttribute="top" secondItem="POD-sg" secondAttribute="top" id="POD-co-t"/>
+                        <constraint firstItem="POD-container" firstAttribute="trailing" secondItem="POD-sg" secondAttribute="trailing" id="POD-co-tr"/>
+                        <constraint firstItem="POD-container" firstAttribute="width" secondItem="POD-fg" secondAttribute="width" id="POD-co-w"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="POD-sg"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="POD-fg"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="POD-safe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="POD-scroll" firstAttribute="bottom" secondItem="POD-safe" secondAttribute="bottom" id="POD-sv-b"/>
+                <constraint firstItem="POD-scroll" firstAttribute="leading" secondItem="POD-safe" secondAttribute="leading" id="POD-sv-l"/>
+                <constraint firstItem="POD-scroll" firstAttribute="top" secondItem="POD-safe" secondAttribute="top" id="POD-sv-t"/>
+                <constraint firstItem="POD-safe" firstAttribute="trailing" secondItem="POD-scroll" secondAttribute="trailing" id="POD-sv-tr"/>
+            </constraints>
+            <point key="canvasLocation" x="-303" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-01" width="16" height="16"/>
+        <image name="clock-03" width="16" height="16"/>
+        <namedColor name="MainWithAlpha">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditStorageVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmButton" destination="conf-btn" id="conf-btn-out"/>
+                <outlet property="tableView" destination="es-tv" id="es-tv-out"/>
+                <outlet property="view" destination="root" id="root-out"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="root">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="es-tv">
+                    <rect key="frame" x="16" y="142" width="361" height="602"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es-bottom" userLabel="bottomContainer">
+                    <rect key="frame" x="0.0" y="744" width="393" height="108"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="conf-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                            <rect key="frame" x="16" y="32" width="361" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="conf-h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="confirm_edit_storage"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="confirm_edit_storage"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="conf-act"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="conf-btn" secondAttribute="bottom" constant="32" id="conf-bot"/>
+                        <constraint firstItem="conf-btn" firstAttribute="leading" secondItem="es-bottom" secondAttribute="leading" constant="16" id="conf-lead"/>
+                        <constraint firstItem="conf-btn" firstAttribute="top" secondItem="es-bottom" secondAttribute="top" constant="32" id="conf-top"/>
+                        <constraint firstAttribute="trailing" secondItem="conf-btn" secondAttribute="trailing" constant="16" id="conf-trail"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.maskedCorners">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe"/>
+            <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="es-bottom" secondAttribute="bottom" id="bot-bot"/>
+                <constraint firstItem="es-bottom" firstAttribute="leading" secondItem="safe" secondAttribute="leading" id="bot-lead"/>
+                <constraint firstItem="es-bottom" firstAttribute="trailing" secondItem="safe" secondAttribute="trailing" id="bot-trail"/>
+                <constraint firstItem="es-tv" firstAttribute="bottom" secondItem="es-bottom" secondAttribute="top" id="tv-bot"/>
+                <constraint firstItem="es-tv" firstAttribute="leading" secondItem="safe" secondAttribute="leading" constant="16" id="tv-lead"/>
+                <constraint firstItem="es-tv" firstAttribute="top" secondItem="safe" secondAttribute="top" constant="24" id="tv-top"/>
+                <constraint firstItem="safe" firstAttribute="trailing" secondItem="es-tv" secondAttribute="trailing" constant="16" id="tv-trail"/>
+            </constraints>
+            <point key="canvasLocation" x="-121" y="21"/>
+        </view>
+    </objects>
+</document>

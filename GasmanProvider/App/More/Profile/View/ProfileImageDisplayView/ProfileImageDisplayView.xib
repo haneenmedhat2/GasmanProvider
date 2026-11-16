@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileImageDisplayView" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="documentImageView" destination="PD-img-001" id="PD-img-cn1"/>
+                <outlet property="titleLabel" destination="PD-lbl-001" id="PD-lbl-cn1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="PD-vw-001">
+            <rect key="frame" x="0.0" y="0.0" width="540" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PD-sk-001">
+                    <rect key="frame" x="0.0" y="0.0" width="540" height="88"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PD-lbl-001">
+                            <rect key="frame" x="0.0" y="0.0" width="31" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="PD-img-001">
+                            <rect key="frame" x="0.0" y="28" width="60" height="60"/>
+                            <color key="backgroundColor" name="moreBG"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="KvL-FI-9v9"/>
+                                <constraint firstAttribute="width" secondItem="PD-img-001" secondAttribute="height" multiplier="1:1" id="rPu-sg-VVv"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PD-sk-001" secondAttribute="bottom" id="PD-c-b1"/>
+                <constraint firstItem="PD-sk-001" firstAttribute="leading" secondItem="PD-vw-001" secondAttribute="leading" id="PD-c-l1"/>
+                <constraint firstAttribute="trailing" secondItem="PD-sk-001" secondAttribute="trailing" id="PD-c-r1"/>
+                <constraint firstItem="PD-sk-001" firstAttribute="top" secondItem="PD-vw-001" secondAttribute="top" id="PD-c-t1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-38.167938931297705" y="-137.32394366197184"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="moreBG">
+            <color red="0.97254901960784312" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

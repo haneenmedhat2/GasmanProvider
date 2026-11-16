@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MerchantVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="pv-avatar" id="out-avatar"/>
+                <outlet property="changeMerchantButton" destination="pv-change-btn" id="out-change"/>
+                <outlet property="distanceLabel" destination="pv-dist-lbl" id="out-dist"/>
+                <outlet property="emptyView" destination="cnt-stk" id="out-empty"/>
+                <outlet property="locationLabel" destination="pv-loc-lbl" id="out-loc"/>
+                <outlet property="nameLabel" destination="pv-name" id="out-name"/>
+                <outlet property="orderNowButton" destination="pv-order-btn" id="out-order"/>
+                <outlet property="phoneLabel" destination="pv-phone-lbl" id="out-phone"/>
+                <outlet property="profileView" destination="pv-root" id="out-profile"/>
+                <outlet property="selectButton" destination="sel-btn" id="sel-btn-out"/>
+                <outlet property="view" destination="root-view" id="view-out"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="root-view">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-stk">
+                    <rect key="frame" x="0.0" y="274.33333333333337" width="393" height="353.33333333333337"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-lbl">
+                            <rect key="frame" x="144.66666666666666" y="16.000000000000004" width="103.66666666666666" height="57.333333333333343"/>
+                            <string key="text">إختيار
+تاجر معتمد</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="select_certified_merchant_title"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView contentMode="scaleAspectFit" image="merchant" translatesAutoresizingMaskIntoConstraints="NO" id="ico-img" userLabel="iconImageView">
+                            <rect key="frame" x="121.66666666666669" y="105.33333333333337" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="ico-h"/>
+                                <constraint firstAttribute="width" constant="150" id="ico-w"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sel-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                            <rect key="frame" x="16" y="287.33333333333331" width="361" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="btn-h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="select_certified_merchant"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapSelectMerchant:" destination="-1" eventType="touchUpInside" id="sel-act"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="sel-btn" firstAttribute="leading" secondItem="cnt-stk" secondAttribute="leading" constant="16" id="stk-btn-lead"/>
+                        <constraint firstAttribute="trailing" secondItem="sel-btn" secondAttribute="trailing" constant="16" id="stk-btn-trail"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                </stackView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pv-root" userLabel="profileView">
+                    <rect key="frame" x="16" y="134.00000000000003" width="361" height="432.66666666666674"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UDF-rN-BMK">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="432.66666666666669"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="pv-avatar" userLabel="avatarImageView">
+                                    <rect key="frame" x="130.66666666666666" y="0.0" width="100" height="100"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="av-h"/>
+                                        <constraint firstAttribute="width" constant="100" id="av-w"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="pv-name" userLabel="nameLabel">
+                                    <rect key="frame" x="152.33333333333334" y="116.00000000000001" width="56.666666666666657" height="28.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pv-loc-stk" userLabel="LocationStackView">
+                                    <rect key="frame" x="139" y="160.66666666666669" width="83.333333333333314" height="40"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleAspectFit" image="location-share-01" translatesAutoresizingMaskIntoConstraints="NO" id="pv-loc-icon">
+                                            <rect key="frame" x="12" y="12" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="loc-icon-h"/>
+                                                <constraint firstAttribute="width" constant="16" id="loc-icon-w"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="location-share-01"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv-loc-lbl" userLabel="locationLabel">
+                                            <rect key="frame" x="36" y="12" width="35.333333333333343" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="hintColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="moreBG"/>
+                                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pv-dist-stk" userLabel="DistanceStackView">
+                                    <rect key="frame" x="139" y="216.66666666666669" width="83.333333333333314" height="40"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleAspectFit" image="location-user-04" translatesAutoresizingMaskIntoConstraints="NO" id="pv-dist-icon">
+                                            <rect key="frame" x="12" y="12" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="dist-icon-h"/>
+                                                <constraint firstAttribute="width" constant="16" id="dist-icon-w"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="location-user-04"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv-dist-lbl" userLabel="distanceLabel">
+                                            <rect key="frame" x="36" y="12" width="35.333333333333343" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="hintColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="moreBG"/>
+                                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pv-phone-stk" userLabel="PhoneStackView">
+                                    <rect key="frame" x="139" y="272.66666666666669" width="83.333333333333314" height="40"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleAspectFit" image="smart-phone" translatesAutoresizingMaskIntoConstraints="NO" id="pv-phone-icon">
+                                            <rect key="frame" x="12" y="12" width="16" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="phone-icon-h"/>
+                                                <constraint firstAttribute="width" constant="16" id="phone-icon-w"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="smart-phone"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv-phone-lbl" userLabel="phoneLabel">
+                                            <rect key="frame" x="36" y="12" width="35.333333333333343" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="hintColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="moreBG"/>
+                                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv-order-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="328.66666666666669" width="329" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="order-btn-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="order_now"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapOrderNow:" destination="-1" eventType="touchUpInside" id="order-act"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv-change-btn">
+                                    <rect key="frame" x="16" y="388.66666666666663" width="329" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="change-btn-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" name="Main"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="change_merchant"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="Main"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapChangeMerchant:" destination="-1" eventType="touchUpInside" id="change-act"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="pv-order-btn" firstAttribute="leading" secondItem="UDF-rN-BMK" secondAttribute="leading" constant="16" id="WWJ-Pe-8Y6"/>
+                                <constraint firstItem="pv-change-btn" firstAttribute="leading" secondItem="UDF-rN-BMK" secondAttribute="leading" constant="16" id="h8d-cY-c5d"/>
+                                <constraint firstAttribute="trailing" secondItem="pv-change-btn" secondAttribute="trailing" constant="16" id="pR6-s1-Sdu"/>
+                                <constraint firstAttribute="trailing" secondItem="pv-order-btn" secondAttribute="trailing" constant="16" id="zoq-Mx-fJJ"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UDF-rN-BMK" secondAttribute="bottom" id="6uh-1l-IyT"/>
+                        <constraint firstItem="UDF-rN-BMK" firstAttribute="top" secondItem="pv-root" secondAttribute="top" id="8W6-Hi-4ep"/>
+                        <constraint firstAttribute="trailing" secondItem="UDF-rN-BMK" secondAttribute="trailing" id="nnA-a4-18b"/>
+                        <constraint firstItem="UDF-rN-BMK" firstAttribute="leading" secondItem="pv-root" secondAttribute="leading" id="tch-dr-d6F"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-area"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="cnt-stk" firstAttribute="leading" secondItem="safe-area" secondAttribute="leading" id="E9n-gY-e9y"/>
+                <constraint firstItem="cnt-stk" firstAttribute="centerY" secondItem="safe-area" secondAttribute="centerY" id="Jl1-Z2-zm5"/>
+                <constraint firstItem="safe-area" firstAttribute="trailing" secondItem="cnt-stk" secondAttribute="trailing" id="aSM-fL-Iul"/>
+                <constraint firstItem="cnt-stk" firstAttribute="centerX" secondItem="safe-area" secondAttribute="centerX" id="kOg-uw-Igi"/>
+                <constraint firstItem="pv-root" firstAttribute="leading" secondItem="safe-area" secondAttribute="leading" constant="16" id="pv-lead"/>
+                <constraint firstItem="pv-root" firstAttribute="top" secondItem="safe-area" secondAttribute="top" constant="16" id="pv-top"/>
+                <constraint firstItem="safe-area" firstAttribute="trailing" secondItem="pv-root" secondAttribute="trailing" constant="16" id="pv-trail"/>
+            </constraints>
+            <point key="canvasLocation" x="-121" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location-share-01" width="15" height="15"/>
+        <image name="location-user-04" width="15" height="15"/>
+        <image name="merchant" width="150" height="150"/>
+        <image name="smart-phone" width="15" height="15"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hintColor">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="moreBG">
+            <color red="0.97254901960784312" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletPopup" customModule="GasMan" customModuleProvider="target">
+            <connections>
+                <outlet property="amountTextField" destination="HSJ-iX-8zf" id="ESk-Oq-2I3"/>
+                <outlet property="backView" destination="cCN-wW-fvs" id="jAh-RC-D0D"/>
+                <outlet property="contentView" destination="iOw-m6-th0" id="Wob-fi-Znh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCN-wW-fvs" userLabel="BackView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOw-m6-th0" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="641.66666666666663" width="393" height="210.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-qw-lij" userLabel="ContainerStackView">
+                            <rect key="frame" x="16" y="24" width="361" height="162.33333333333334"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbn-bO-CLP">
+                                    <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="top_up"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLX-L5-fgm">
+                                    <rect key="frame" x="0.0" y="40" width="41" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="top_up_wallet"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-db-2Ef" userLabel="TextFieldStackView">
+                                    <rect key="frame" x="0.0" y="70.333333333333371" width="361" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSJ-iX-8zf">
+                                            <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                            <color key="tintColor" name="Main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="OpF-dw-cVR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="wallet_top_up"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xW-cO-WzS" customClass="MainButton" customModule="GasMan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="130.33333333333337" width="361" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Confirm">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="top_up_now"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="svx-VQ-3L2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="1xW-cO-WzS" firstAttribute="leading" secondItem="5Ud-qw-lij" secondAttribute="leading" id="ECj-A5-5A3"/>
+                                <constraint firstAttribute="trailing" secondItem="xLS-db-2Ef" secondAttribute="trailing" id="Sri-vf-18j"/>
+                                <constraint firstItem="xLS-db-2Ef" firstAttribute="leading" secondItem="5Ud-qw-lij" secondAttribute="leading" id="ezU-pb-jos"/>
+                                <constraint firstAttribute="trailing" secondItem="1xW-cO-WzS" secondAttribute="trailing" id="wCh-Rz-M6h"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="MainBackGround"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="5Ud-qw-lij" secondAttribute="trailing" constant="16" id="IVN-GW-duP"/>
+                        <constraint firstItem="5Ud-qw-lij" firstAttribute="leading" secondItem="iOw-m6-th0" secondAttribute="leading" constant="16" id="m01-yH-Kyo"/>
+                        <constraint firstAttribute="bottom" secondItem="5Ud-qw-lij" secondAttribute="bottom" constant="24" id="neV-B4-jVK"/>
+                        <constraint firstItem="5Ud-qw-lij" firstAttribute="top" secondItem="iOw-m6-th0" secondAttribute="top" constant="24" id="q7n-fV-C7R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="iOw-m6-th0" secondAttribute="bottom" id="8fO-md-x7p"/>
+                <constraint firstItem="cCN-wW-fvs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9gZ-tN-Xuy"/>
+                <constraint firstAttribute="bottom" secondItem="cCN-wW-fvs" secondAttribute="bottom" id="BdM-fr-5Hu"/>
+                <constraint firstItem="iOw-m6-th0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="E8K-Mx-tEl"/>
+                <constraint firstItem="iOw-m6-th0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="IdV-bK-TF0"/>
+                <constraint firstItem="cCN-wW-fvs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vfr-K1-P0l"/>
+                <constraint firstItem="cCN-wW-fvs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eK7-zm-TPe"/>
+            </constraints>
+            <point key="canvasLocation" x="-8.3969465648854964" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBackGround">
+            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

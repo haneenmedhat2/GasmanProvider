@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProviderSignupVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="bankAccountNumberTextField" destination="PB02-tf-001" id="PB02-out-001"/>
+                <outlet property="bankNameTextField" destination="PB01-tf-001" id="PB01-out-001"/>
+                <outlet property="checkBoxButton" destination="PT02-bt-001" id="PT02-out-001"/>
+                <outlet property="cityTextField" destination="PF07-pk-001" id="PF07-out-001"/>
+                <outlet property="commercialEndDateTextField" destination="PI04-tf-001" id="PI04-out-001"/>
+                <outlet property="commercialImageView" destination="PI03-ip-001" id="PI03-out-001"/>
+                <outlet property="commercialNumberTextField" destination="PF06-tf-001" id="PF06-out-001"/>
+                <outlet property="taxNumberTextField" destination="PF09-tf-001" id="PF09-out-001"/>
+                <outlet property="establishmentNameTextField" destination="PF10-tf-001" id="PF10-out-001"/>
+                <outlet property="confirmPasswordTextField" destination="PF03-pw-001" id="PF03-out-001"/>
+                <outlet property="emailTextField" destination="PF05-tf-001" id="PF05-out-001"/>
+                <outlet property="ibanTextField" destination="PB03-tf-001" id="PB03-out-001"/>
+                <outlet property="identityImageView" destination="PI01-ip-001" id="PI01-out-001"/>
+                <outlet property="languageButton" destination="PZ06-vw-001" id="PZ06-out-001"/>
+                <outlet property="locationTextField" destination="PF08-tf-001" id="PF08-out-001"/>
+                <outlet property="passwordTextField" destination="PF02-pw-001" id="PF02-out-001"/>
+                <outlet property="permissionEndDateTextField" destination="PI06-tf-001" id="PI06-out-001"/>
+                <outlet property="permissionImageView" destination="PI05-ip-001" id="PI05-out-001"/>
+                <outlet property="phoneTextField" destination="PF04-ph-001" id="PF04-out-001"/>
+                <outlet property="profileImage" destination="PA06-pv-001" id="PA06-out-001"/>
+                <outlet property="scrollView" destination="PA02-sv-001" id="PSV1-out-001"/>
+                <outlet property="storeNameTextField" destination="PF01-tf-001" id="PF01-out-001"/>
+                <outlet property="view" destination="PA01-rv-001" id="PA01-out-001"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="PA01-rv-001">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA02-sv-001">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="PA03-sk-001" userLabel="ContentStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="1566"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA04-lb-001">
+                                    <rect key="frame" x="16" y="16" width="361" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="create_account"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA05-lb-001">
+                                    <rect key="frame" x="24" y="64" width="345" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" name="secondaryDarkFontColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login_prompt_message"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PA06-pv-001" customClass="ProfileImageView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="105" width="361" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="PA06-hc-001"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PA08-sk-001" userLabel="FormStackView">
+                                    <rect key="frame" x="16" y="229" width="361" height="1164"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF01-tf-001" userLabel="StoreNameTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_store_name"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="provider_store_name_placeholder"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF02-pw-001" userLabel="PasswordTextField" customClass="PasswordTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="54" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonIcon" value="eye.slash.fill" catalog="system"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF03-pw-001" userLabel="ConfirmPasswordTextField" customClass="PasswordTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="108" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="confirm_password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonIcon" value="eye.slash.fill" catalog="system"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="PF04-ph-001" userLabel="PhoneTextField" customClass="PhoneTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="162" width="361" height="120"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="phone_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="phone_number"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF05-tf-001" userLabel="EmailTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="286" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="email"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="email"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="keyboardTypeRawValue">
+                                                    <integer key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF06-tf-001" userLabel="CommercialNumberTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="340" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_commercial_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="provider_commercial_number_placeholder"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="keyboardTypeRawValue">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF07-pk-001" userLabel="CityPickerField" customClass="PickerFieldView" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="394" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="city"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="select_city"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF08-tf-001" userLabel="LocationTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="448" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="select_location"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="select_location"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonIcon" value="location-06"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="PI01-ip-001" userLabel="IdentityImageView" customClass="DocumentPickerView" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="502" width="361" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_identity_image"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="PI03-ip-001" userLabel="CommercialImageView" customClass="DocumentPickerView" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="606" width="361" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_commercial_image"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF09-tf-001" userLabel="TaxNumberTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="710" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_tax_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="provider_tax_number_placeholder"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="keyboardTypeRawValue">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PF10-tf-001" userLabel="EstablishmentNameTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="764" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_establishment_name"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="provider_establishment_name_placeholder"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="PI04-tf-001" userLabel="CommercialEndDateTextField" customClass="DatePickerField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="710" width="361" height="80"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_commercial_end_date"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="PI05-ip-001" userLabel="PermissionImageView" customClass="DocumentPickerView" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="794" width="361" height="100"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_permission_image"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="PI06-tf-001" userLabel="PermissionEndDateTextField" customClass="DatePickerField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="898" width="361" height="80"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="provider_permission_end_date"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PB01-tf-001" userLabel="BankNameTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="982" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="bank_name"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="bank_name"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PB02-tf-001" userLabel="BankAccountNumberTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="1036" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="bank_account_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="bank_account_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="keyboardTypeRawValue">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="PB03-tf-001" userLabel="IBANTextField" customClass="GeneralTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="1090" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="iban_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="iban_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PT01-sk-001" userLabel="TermsStack">
+                                            <rect key="frame" x="0.0" y="1144" width="361" height="20"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT02-bt-001" userLabel="CheckBox">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="PT02-hc-001"/>
+                                                        <constraint firstAttribute="width" constant="20" id="PT02-wc-001"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="Main"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="square" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="didTapCheckBox:" destination="-1" eventType="touchUpInside" id="PT02-ac-001"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT03-lb-001">
+                                                    <rect key="frame" x="24.000000000000004" y="0.0" width="35.333333333333343" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" name="hintColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="agree_to"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PT04-bt-001">
+                                                    <rect key="frame" x="63.333333333333343" y="0.0" width="297.66666666666663" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="terms">
+                                                        <color key="titleColor" name="Main"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="terms_and_conditions"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isUnderlined" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapTermsAndConditions:" destination="-1" eventType="touchUpInside" id="PT04-ac-001"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ01-bt-001" userLabel="ConfirmButton" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="1417" width="361" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="PZ01-hc-001"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="create_account"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="PZ01-ac-001"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PZ02-sk-001" userLabel="LoginStackView">
+                                    <rect key="frame" x="151.66666666666666" y="1485" width="90" height="65"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="PZ03-sk-001">
+                                            <rect key="frame" x="12.333333333333343" y="0.0" width="65" height="27"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZ04-lb-001">
+                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" name="hintColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="already_have_account"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ05-bt-001" userLabel="LoginButton">
+                                                    <rect key="frame" x="35" y="0.0" width="30" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="login">
+                                                        <color key="titleColor" name="Main"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isUnderlined" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="PZ05-ac-001"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZ06-vw-001" customClass="IconTextGeneralButton" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="31" width="90" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="PZ06-hc-001"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="PZ06-wc-001"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImageName" value="translate"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="buttonLabelText" value="arabic"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="btnBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="btnBorderColor">
+                                                    <color key="value" name="Main"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                    <color key="value" name="Main"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="PA04-lb-001" firstAttribute="leading" secondItem="PA03-sk-001" secondAttribute="leading" constant="16" id="PA04-cn-001"/>
+                                <constraint firstAttribute="trailing" secondItem="PA04-lb-001" secondAttribute="trailing" constant="16" id="PA04-cn-002"/>
+                                <constraint firstItem="PA05-lb-001" firstAttribute="leading" secondItem="PA03-sk-001" secondAttribute="leading" constant="24" id="PA05-cn-001"/>
+                                <constraint firstAttribute="trailing" secondItem="PA05-lb-001" secondAttribute="trailing" constant="24" id="PA05-cn-002"/>
+                                <constraint firstItem="PA06-pv-001" firstAttribute="leading" secondItem="PA03-sk-001" secondAttribute="leading" constant="16" id="PA06-cn-001"/>
+                                <constraint firstAttribute="trailing" secondItem="PA06-pv-001" secondAttribute="trailing" constant="16" id="PA06-cn-002"/>
+                                <constraint firstItem="PA08-sk-001" firstAttribute="leading" secondItem="PA03-sk-001" secondAttribute="leading" constant="16" id="PA08-cn-001"/>
+                                <constraint firstAttribute="trailing" secondItem="PA08-sk-001" secondAttribute="trailing" constant="16" id="PA08-cn-002"/>
+                                <constraint firstItem="PZ01-bt-001" firstAttribute="leading" secondItem="PA03-sk-001" secondAttribute="leading" constant="16" id="PZ01-cn-001"/>
+                                <constraint firstAttribute="trailing" secondItem="PZ01-bt-001" secondAttribute="trailing" constant="16" id="PZ01-cn-002"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="16" left="0.0" bottom="16" right="0.0"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="PA03-sk-001" firstAttribute="top" secondItem="psv-cnt-001" secondAttribute="top" id="psv-cn-001"/>
+                        <constraint firstItem="PA03-sk-001" firstAttribute="bottom" secondItem="psv-cnt-001" secondAttribute="bottom" id="psv-cn-002"/>
+                        <constraint firstItem="PA03-sk-001" firstAttribute="leading" secondItem="psv-cnt-001" secondAttribute="leading" id="psv-cn-003"/>
+                        <constraint firstItem="PA03-sk-001" firstAttribute="trailing" secondItem="psv-cnt-001" secondAttribute="trailing" id="psv-cn-004"/>
+                        <constraint firstItem="PA03-sk-001" firstAttribute="width" secondItem="psv-frm-001" secondAttribute="width" id="psv-cn-005"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="psv-cnt-001"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="psv-frm-001"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="PA01-sa-001"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PA02-sv-001" firstAttribute="bottom" secondItem="PA01-sa-001" secondAttribute="bottom" id="psv-bot"/>
+                <constraint firstItem="PA02-sv-001" firstAttribute="leading" secondItem="PA01-sa-001" secondAttribute="leading" id="psv-lead"/>
+                <constraint firstItem="PA02-sv-001" firstAttribute="top" secondItem="PA01-sa-001" secondAttribute="top" id="psv-top"/>
+                <constraint firstAttribute="trailing" secondItem="PA02-sv-001" secondAttribute="trailing" id="psv-trail"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
+        <image name="location-06" width="16" height="16"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="translate" width="24" height="24"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hintColor">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryDarkFontColor">
+            <color red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

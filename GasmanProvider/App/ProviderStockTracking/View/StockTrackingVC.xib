@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StockTrackingVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="bannerCountLabel" destination="cnt-001" id="cnt-out"/>
+                <outlet property="bannerMoreButton" destination="mor-001" id="mor-out"/>
+                <outlet property="bannerMsgLabel" destination="msg-001" id="msg-out"/>
+                <outlet property="bannerView" destination="bnr-001" id="bnr-out"/>
+                <outlet property="contentStack" destination="stk-001" id="stk-out"/>
+                <outlet property="scrollView" destination="scr-001" id="scr-out"/>
+                <outlet property="tableView" destination="tbl-001" id="tbl-out"/>
+                <outlet property="titleLabel" destination="mgb-QC-NG6" id="gFe-mM-D6Y"/>
+                <outlet property="view" destination="root-view" id="view-out"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="root-view">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scr-001">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="stk-001" userLabel="ContainerStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="440.66666666666669"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-QC-NG6">
+                                    <rect key="frame" x="16" y="16" width="361" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="stock_tracking"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="90" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-001" userLabel="CylindersView">
+                                    <rect key="frame" x="16" y="56.000000000000007" width="361" height="102.66666666666669"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-stk">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="102.66666666666667"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msg-001">
+                                                    <rect key="frame" x="8" y="8" width="345" height="14.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-001">
+                                                    <rect key="frame" x="8" y="34.333333333333343" width="345" height="19.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="s09-MN-QX3">
+                                                    <rect key="frame" x="8" y="65.666666666666657" width="345" height="29"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mor-001" userLabel="MoreButton">
+                                                            <rect key="frame" x="311" y="0.0" width="34" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="more">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="didTapMore:" destination="-1" eventType="touchUpInside" id="qnj-fF-TBX"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Main"/>
+                                    <constraints>
+                                        <constraint firstItem="bnr-stk" firstAttribute="top" secondItem="bnr-001" secondAttribute="top" id="HXy-uy-5NS"/>
+                                        <constraint firstAttribute="trailing" secondItem="bnr-stk" secondAttribute="trailing" id="Uo4-Dj-dYM"/>
+                                        <constraint firstAttribute="bottom" secondItem="bnr-stk" secondAttribute="bottom" id="bWX-fb-hPo"/>
+                                        <constraint firstItem="bnr-stk" firstAttribute="leading" secondItem="bnr-001" secondAttribute="leading" id="iD7-75-32k"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="353" placeholderIntrinsicHeight="250" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-001" customClass="TableViewContentSized" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="174.66666666666669" width="361" height="250"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="stk-001" firstAttribute="leading" secondItem="hdf-Vu-Qsi" secondAttribute="leading" id="DM7-pA-T1L"/>
+                        <constraint firstItem="stk-001" firstAttribute="width" secondItem="TVp-KD-LQO" secondAttribute="width" id="NOx-Aa-UmJ"/>
+                        <constraint firstItem="stk-001" firstAttribute="bottom" secondItem="hdf-Vu-Qsi" secondAttribute="bottom" id="P7V-sA-5F1"/>
+                        <constraint firstItem="stk-001" firstAttribute="top" secondItem="hdf-Vu-Qsi" secondAttribute="top" id="ojh-4K-WSR"/>
+                        <constraint firstItem="stk-001" firstAttribute="trailing" secondItem="hdf-Vu-Qsi" secondAttribute="trailing" id="zbG-xT-x6S"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="hdf-Vu-Qsi"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="TVp-KD-LQO"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safe-area"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="scr-001" firstAttribute="top" secondItem="safe-area" secondAttribute="top" id="rv1"/>
+                <constraint firstItem="scr-001" firstAttribute="leading" secondItem="safe-area" secondAttribute="leading" id="rv2"/>
+                <constraint firstItem="safe-area" firstAttribute="trailing" secondItem="scr-001" secondAttribute="trailing" id="rv3"/>
+                <constraint firstItem="safe-area" firstAttribute="bottom" secondItem="scr-001" secondAttribute="bottom" id="rv4"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

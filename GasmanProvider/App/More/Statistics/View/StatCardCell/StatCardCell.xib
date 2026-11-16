@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cel-001" customClass="StatCardCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cel-stk-001">
+                        <rect key="frame" x="8" y="12" width="164" height="97"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ico-con-001" userLabel="iconContainerView">
+                                <rect key="frame" x="66" y="0.0" width="32" height="32"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ico-img-001" userLabel="iconImageView">
+                                        <rect key="frame" x="6" y="6" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="ico-h-c"/>
+                                            <constraint firstAttribute="width" constant="20" id="ico-w-c"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="Main"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ico-con-h"/>
+                                    <constraint firstAttribute="width" constant="32" id="ico-con-w"/>
+                                    <constraint firstItem="ico-img-001" firstAttribute="centerX" secondItem="ico-con-001" secondAttribute="centerX" id="ico-cx"/>
+                                    <constraint firstItem="ico-img-001" firstAttribute="centerY" secondItem="ico-con-001" secondAttribute="centerY" id="ico-cy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="val-lbl-001" userLabel="valueLabel">
+                                <rect key="frame" x="75.666666666666671" y="44" width="12.666666666666671" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-lbl-001" userLabel="titleLabel">
+                                <rect key="frame" x="64.333333333333329" y="80" width="35.333333333333329" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="saf-001"/>
+            <color key="backgroundColor" name="moreBG"/>
+            <constraints>
+                <constraint firstItem="cel-stk-001" firstAttribute="leading" secondItem="cel-001" secondAttribute="leading" constant="8" id="stk-l-c"/>
+                <constraint firstItem="cel-stk-001" firstAttribute="top" secondItem="cel-001" secondAttribute="top" constant="12" id="stk-t-c"/>
+                <constraint firstAttribute="trailing" secondItem="cel-stk-001" secondAttribute="trailing" constant="8" id="stk-tr-c"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="iconImageView" destination="ico-img-001" id="ico-img-out"/>
+                <outlet property="titleLabel" destination="ttl-lbl-001" id="ttl-out"/>
+                <outlet property="valueLabel" destination="val-lbl-001" id="val-out"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="129"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="moreBG">
+            <color red="0.97254901960784312" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

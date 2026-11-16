@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingLocationVC" customModule="GasMan" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="pgb-Dt-BGb" id="Tll-5x-5oS"/>
+                <outlet property="addressTextField" destination="NbW-0Q-E88" id="2u5-FW-u7A"/>
+                <outlet property="mapView" destination="LYp-7L-6Lj" id="qjy-PK-7QH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlI-6d-wH7">
+                    <rect key="frame" x="0.0" y="118" width="393" height="734"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-7L-6Lj" userLabel="MapView" customClass="GMSMapView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="734"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-XI-oXB" userLabel="currentLocationBtn">
+                            <rect key="frame" x="347" y="368" width="30" height="30"/>
+                            <color key="backgroundColor" name="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Nep-Es-Y6f"/>
+                                <constraint firstAttribute="width" constant="30" id="UZT-rT-pDf"/>
+                            </constraints>
+                            <color key="tintColor" name="Main"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="location" catalog="system"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapCurrentLocation:" destination="-1" eventType="touchUpInside" id="S6c-bI-KyO"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="328" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-UE-ZBB" userLabel="LocationView">
+                            <rect key="frame" x="0.0" y="406" width="393" height="328"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HDS-j7-8JE" userLabel="ContainerStackView">
+                                    <rect key="frame" x="16" y="16" width="361" height="296"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-aK-vkN" userLabel="AddressLabelStackView">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="176"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0tu-ov-XNg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="16" height="176"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-06" translatesAutoresizingMaskIntoConstraints="NO" id="iKL-Uo-Y6Z">
+                                                            <rect key="frame" x="0.0" y="80" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="3dg-bJ-oNw"/>
+                                                                <constraint firstAttribute="width" constant="16" id="jp4-p6-9KG"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading address..." textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-Dt-BGb">
+                                                    <rect key="frame" x="24" y="0.0" width="337" height="176"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Loading address..."/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-c1-zc3" userLabel="TextFieldStackView">
+                                            <rect key="frame" x="0.0" y="192" width="361" height="44"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NbW-0Q-E88">
+                                                    <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                                    <color key="tintColor" name="Main"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Cel-Cw-02O"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="address_name"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" name="whiteColor"/>
+                                            <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ6-X1-D0x" userLabel="confirmButton" customClass="MainButton" customModule="GasMan" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="252" width="361" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="mxS-wB-Hmz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="confirm_address"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapConfirmAddress:" destination="-1" eventType="touchUpInside" id="1Fd-iz-FoG"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="TextFieldBorder"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="HDS-j7-8JE" secondAttribute="bottom" constant="16" id="3gh-cE-0j8"/>
+                                <constraint firstItem="HDS-j7-8JE" firstAttribute="top" secondItem="2tl-UE-ZBB" secondAttribute="top" constant="16" id="4N8-cS-WaI"/>
+                                <constraint firstItem="HDS-j7-8JE" firstAttribute="leading" secondItem="2tl-UE-ZBB" secondAttribute="leading" constant="16" id="aM0-RI-v1c"/>
+                                <constraint firstAttribute="trailing" secondItem="HDS-j7-8JE" secondAttribute="trailing" constant="16" id="cQG-5m-3VZ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="zc3-XI-oXB" firstAttribute="bottom" secondItem="2tl-UE-ZBB" secondAttribute="top" constant="-8" id="3DZ-Cw-Hqp"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="bottom" secondItem="RmN-rN-lwr" secondAttribute="bottom" id="LYr-jk-NOM"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="top" secondItem="RmN-rN-lwr" secondAttribute="top" id="Z5P-zT-jNg"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="width" secondItem="ZGh-u7-A1t" secondAttribute="width" id="ZFv-Tu-F9n"/>
+                        <constraint firstAttribute="bottom" secondItem="2tl-UE-ZBB" secondAttribute="bottom" id="bYu-zF-R3r"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="height" secondItem="ZGh-u7-A1t" secondAttribute="height" id="cYm-d6-Yco"/>
+                        <constraint firstItem="zc3-XI-oXB" firstAttribute="trailing" secondItem="LYp-7L-6Lj" secondAttribute="trailing" constant="-16" id="fCC-rO-lbg"/>
+                        <constraint firstAttribute="trailing" secondItem="2tl-UE-ZBB" secondAttribute="trailing" id="fif-q5-agX"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="trailing" secondItem="RmN-rN-lwr" secondAttribute="trailing" id="pkD-Ig-XcR"/>
+                        <constraint firstItem="LYp-7L-6Lj" firstAttribute="leading" secondItem="RmN-rN-lwr" secondAttribute="leading" id="rhg-SK-nOd"/>
+                        <constraint firstItem="2tl-UE-ZBB" firstAttribute="leading" secondItem="ZGh-u7-A1t" secondAttribute="leading" id="tpt-By-bWK"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="RmN-rN-lwr"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="ZGh-u7-A1t"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AlI-6d-wH7" secondAttribute="bottom" id="7Gz-xY-rlt"/>
+                <constraint firstItem="AlI-6d-wH7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8kk-WL-bNt"/>
+                <constraint firstItem="AlI-6d-wH7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EQa-QE-4Q1"/>
+                <constraint firstItem="AlI-6d-wH7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M6K-qG-XCW"/>
+            </constraints>
+            <point key="canvasLocation" x="91" y="127"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location" catalog="system" width="128" height="119"/>
+        <image name="location-06" width="16" height="16"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

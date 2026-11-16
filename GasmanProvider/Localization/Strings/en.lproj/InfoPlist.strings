@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+
+ Created by MGAbouarab®
+  
+*/
+
+"CFBundleDisplayName" = "GasManProvider";
+"NSCameraUsageDescription" = "GasMan Provider uses the camera so you can take and attach photos of orders, profile details, and required documents.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "GasMan Provider uses your location to help you set work and delivery locations and find nearby orders and merchants, including while an active delivery is in progress.";
+"NSLocationAlwaysUsageDescription" = "GasMan Provider uses your location in the background to keep an active delivery's location information up to date.";
+"NSLocationWhenInUseUsageDescription" = "GasMan Provider uses your location to help you set work and delivery locations and find nearby orders and merchants.";
+"NSPhotoLibraryUsageDescription" = "GasMan Provider accesses your photo library so you can select and attach photos of orders, profile details, and required documents.";
+"NSMicrophoneUsageDescription" = "GasMan Provider uses the microphone so you can record and send voice messages.";

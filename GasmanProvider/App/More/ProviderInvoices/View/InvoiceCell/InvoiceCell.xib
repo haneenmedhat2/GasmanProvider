@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InvoiceCell" rowHeight="120" id="ic-001" customClass="InvoiceCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ic-001" id="ic-content">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic-container">
+                        <rect key="frame" x="0.0" y="8" width="361" height="104"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sjo-Rw-PRg">
+                                <rect key="frame" x="0.0" y="0.0" width="361" height="104"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smallAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ic-logo">
+                                        <rect key="frame" x="8" y="22" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ic-logo-h"/>
+                                            <constraint firstAttribute="width" constant="60" id="ic-logo-w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ic-text-stk">
+                                        <rect key="frame" x="76" y="15.666666666666664" width="277" height="72.666666666666686"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic-order">
+                                                <rect key="frame" x="0.0" y="0.0" width="39.666666666666664" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic-total">
+                                                <rect key="frame" x="0.0" y="25.333333333333332" width="31" height="14.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic-open">
+                                                <rect key="frame" x="0.0" y="45.666666666666657" width="30" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="open"/>
+                                                <connections>
+                                                    <action selector="didTapOpenInvoice:" destination="ic-001" eventType="touchUpInside" id="ic-open-act"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="10" left="8" bottom="10" right="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sjo-Rw-PRg" firstAttribute="leading" secondItem="ic-container" secondAttribute="leading" id="9W8-60-QV5"/>
+                            <constraint firstAttribute="bottom" secondItem="Sjo-Rw-PRg" secondAttribute="bottom" id="UZn-3C-beS"/>
+                            <constraint firstAttribute="trailing" secondItem="Sjo-Rw-PRg" secondAttribute="trailing" id="qdD-Iu-06F"/>
+                            <constraint firstItem="Sjo-Rw-PRg" firstAttribute="top" secondItem="ic-container" secondAttribute="top" id="uhY-VM-8Cc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                <color key="value" name="TextFieldBorder"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ic-container" secondAttribute="bottom" constant="8" id="ic-cnt-b"/>
+                    <constraint firstItem="ic-container" firstAttribute="leading" secondItem="ic-content" secondAttribute="leading" id="ic-cnt-l"/>
+                    <constraint firstItem="ic-container" firstAttribute="top" secondItem="ic-content" secondAttribute="top" constant="8" id="ic-cnt-t"/>
+                    <constraint firstAttribute="trailing" secondItem="ic-container" secondAttribute="trailing" id="ic-cnt-tr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="ic-container" id="ic-container-out"/>
+                <outlet property="logoImageView" destination="ic-logo" id="ic-logo-out"/>
+                <outlet property="openInvoiceButton" destination="ic-open" id="ic-open-out"/>
+                <outlet property="orderNumberLabel" destination="ic-order" id="ic-order-out"/>
+                <outlet property="totalLabel" destination="ic-total" id="ic-total-out"/>
+            </connections>
+            <point key="canvasLocation" x="80" y="80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="smallAppIcon" width="65" height="69.666664123535156"/>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

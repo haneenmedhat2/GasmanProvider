@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MerchantOrderDetailsVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="MOD-cancel-btn" id="MOD-cancel-conn"/>
+                <outlet property="cancelReasonView" destination="MOD-cancel-reason" id="MOD-cr-conn"/>
+                <outlet property="dateLabel" destination="oko-dM-5N9" id="ENY-uG-TNO"/>
+                <outlet property="deliverToProviderButton" destination="MOD-dtp-btn" id="MOD-dtp-conn"/>
+                <outlet property="finishButton" destination="MOD-finish-btn" id="MOD-finish-conn"/>
+                <outlet property="merchantInfoView" destination="MOD-merchant-info" id="MOD-mi-conn"/>
+                <outlet property="orderNumberLabel" destination="MOD-orderNum" id="MOD-orderNum-conn"/>
+                <outlet property="orderSummaryView" destination="MOD-details-info" id="MOD-di-conn"/>
+                <outlet property="scrollView" destination="MOD-scroll" id="MOD-scroll-conn"/>
+                <outlet property="timeLabel" destination="O5m-bp-zCZ" id="fc1-Xt-2IX"/>
+                <outlet property="view" destination="MOD-root" id="MOD-root-conn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MOD-root">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-scroll">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-container" userLabel="ContainerStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="631.33333333333337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="طلب رقم 84521" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-orderNum">
+                                    <rect key="frame" x="16" y="15.999999999999998" width="361" height="19.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-Sm-Y1R" userLabel="OrderDateStackView">
+                                    <rect key="frame" x="16" y="51.333333333333343" width="361" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="176.66666666666666" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="4OR-TK-ie0" userLabel="DateView">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vLB-VJ-BLj" userLabel="DateStackView">
+                                                    <rect key="frame" x="8" y="8" width="160.66666666666666" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-01" translatesAutoresizingMaskIntoConstraints="NO" id="C5b-U0-rnj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="avj-4O-u7c"/>
+                                                                <constraint firstAttribute="height" constant="16" id="jPe-Xt-R4I"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oko-dM-5N9" userLabel="dateLabel">
+                                                            <rect key="frame" x="24" y="0.0" width="136.66666666666666" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstItem="vLB-VJ-BLj" firstAttribute="top" secondItem="4OR-TK-ie0" secondAttribute="top" constant="8" id="0jZ-iO-F7x"/>
+                                                <constraint firstAttribute="trailing" secondItem="vLB-VJ-BLj" secondAttribute="trailing" constant="8" id="1TD-fs-tQ2"/>
+                                                <constraint firstItem="vLB-VJ-BLj" firstAttribute="leading" secondItem="4OR-TK-ie0" secondAttribute="leading" constant="8" id="5lU-Y7-x8P"/>
+                                                <constraint firstAttribute="bottom" secondItem="vLB-VJ-BLj" secondAttribute="bottom" constant="8" id="SVV-BJ-JOd"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIQ-nm-PIl" userLabel="TimeView">
+                                            <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qGa-dg-uN6" userLabel="TimeStackView">
+                                                    <rect key="frame" x="8" y="8" width="160.33333333333334" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-03" translatesAutoresizingMaskIntoConstraints="NO" id="dkD-4w-CcI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="T2z-74-3GA"/>
+                                                                <constraint firstAttribute="width" constant="16" id="ldH-H5-065"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5m-bp-zCZ" userLabel="timeLabel">
+                                                            <rect key="frame" x="24" y="0.0" width="136.33333333333334" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstItem="qGa-dg-uN6" firstAttribute="top" secondItem="iIQ-nm-PIl" secondAttribute="top" constant="8" id="Gib-J3-5oJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="qGa-dg-uN6" secondAttribute="trailing" constant="8" id="UW2-97-dl9"/>
+                                                <constraint firstItem="qGa-dg-uN6" firstAttribute="leading" secondItem="iIQ-nm-PIl" secondAttribute="leading" constant="8" id="Uxz-bV-njg"/>
+                                                <constraint firstAttribute="bottom" secondItem="qGa-dg-uN6" secondAttribute="bottom" constant="8" id="uHO-Qn-bSH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-details-info" customClass="OrderSummaryView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="99.333333333333343" width="361" height="200.00000000000003"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-merchant-info" customClass="MerchantInfoView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="315.33333333333331" width="361" height="120"/>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-cancel-reason" customClass="LabeledNoteView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="443.33333333333337" width="361" height="0.0"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-dtp-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="451.33333333333337" width="361" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="MOD-dtp-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="deliver_to_provider"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="delivered"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapDeliverToProvider:" destination="-1" eventType="touchUpInside" id="MOD-dtp-act"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-finish-btn" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="511.33333333333337" width="361" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="MOD-fb-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="finish_order"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="delivered"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapFinish:" destination="-1" eventType="touchUpInside" id="MOD-finish-act"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOD-cancel-btn" customClass="RedButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="571.33333333333337" width="361" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="MOD-cb-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="cancel_order"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="cancel_order"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="MOD-cancel-act"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="MOD-cancel-btn" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-cb-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-cancel-btn" secondAttribute="trailing" constant="16" id="MOD-cb-t"/>
+                                <constraint firstItem="MOD-cancel-reason" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-cr-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-cancel-reason" secondAttribute="trailing" constant="16" id="MOD-cr-t"/>
+                                <constraint firstItem="MOD-details-info" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-di-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-details-info" secondAttribute="trailing" constant="16" id="MOD-di-t"/>
+                                <constraint firstItem="MOD-dtp-btn" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-dtp-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-dtp-btn" secondAttribute="trailing" constant="16" id="MOD-dtp-t"/>
+                                <constraint firstItem="MOD-finish-btn" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-fb-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-finish-btn" secondAttribute="trailing" constant="16" id="MOD-fb-t"/>
+                                <constraint firstItem="MOD-merchant-info" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-mi-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-merchant-info" secondAttribute="trailing" constant="16" id="MOD-mi-t"/>
+                                <constraint firstItem="MOD-orderNum" firstAttribute="leading" secondItem="MOD-container" secondAttribute="leading" constant="16" id="MOD-on-l"/>
+                                <constraint firstAttribute="trailing" secondItem="MOD-orderNum" secondAttribute="trailing" constant="16" id="MOD-on-t"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MOD-container" firstAttribute="trailing" secondItem="MOD-sg" secondAttribute="trailing" id="Dnp-r0-ohy"/>
+                        <constraint firstItem="MOD-container" firstAttribute="width" secondItem="MOD-fg" secondAttribute="width" id="WG6-LO-TYx"/>
+                        <constraint firstItem="MOD-container" firstAttribute="bottom" secondItem="MOD-sg" secondAttribute="bottom" id="jQz-7X-5wK"/>
+                        <constraint firstItem="MOD-container" firstAttribute="top" secondItem="MOD-sg" secondAttribute="top" id="k7C-7O-6JH"/>
+                        <constraint firstItem="MOD-container" firstAttribute="leading" secondItem="MOD-sg" secondAttribute="leading" id="yoA-J8-Dwj"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="MOD-sg"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="MOD-fg"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="MOD-safe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MOD-scroll" firstAttribute="bottom" secondItem="MOD-safe" secondAttribute="bottom" id="MOD-sv-b"/>
+                <constraint firstItem="MOD-scroll" firstAttribute="leading" secondItem="MOD-safe" secondAttribute="leading" id="MOD-sv-l"/>
+                <constraint firstItem="MOD-scroll" firstAttribute="top" secondItem="MOD-safe" secondAttribute="top" id="MOD-sv-t"/>
+                <constraint firstItem="MOD-safe" firstAttribute="trailing" secondItem="MOD-scroll" secondAttribute="trailing" id="MOD-sv-tr"/>
+            </constraints>
+            <point key="canvasLocation" x="-303" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-01" width="16" height="16"/>
+        <image name="clock-03" width="16" height="16"/>
+        <namedColor name="MainWithAlpha">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

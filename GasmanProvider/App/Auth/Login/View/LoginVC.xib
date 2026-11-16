@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="biometricContainerStack" destination="bio-sk-001" id="bio-out-003"/>
+                <outlet property="faceIDButton" destination="bio-bt-001" id="bio-out-001"/>
+                <outlet property="languageButton" destination="aec-O6-scY" id="K0I-6H-S96"/>
+                <outlet property="passwordTextField" destination="uQq-d2-qvA" id="Lng-HQ-Bub"/>
+                <outlet property="phoneTextField" destination="epz-sD-1TJ" id="CeV-gI-5Fx"/>
+                <outlet property="touchIDButton" destination="bio-bt-002" id="bio-out-002"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-qK-Osy">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="uSw-Z8-0Cd" userLabel="ContentStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="837.66666666666663"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pfj-Sa-wYr" userLabel="HeaderStackView">
+                                    <rect key="frame" x="59" y="0.0" width="275" height="100"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dKv-T7-6l9">
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="ZWv-Oz-Huv"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-rq-ciW" userLabel="LoginLabelsStack">
+                                    <rect key="frame" x="32" y="124.00000000000001" width="329" height="54.666666666666671"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-5G-iby">
+                                            <rect key="frame" x="142" y="0.0" width="45" height="21.666666666666668"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P41-Ia-Dgc">
+                                            <rect key="frame" x="147" y="37.666666666666686" width="35.333333333333343" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="secondaryDarkFontColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login_prompt_message"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tiS-i7-LJt" userLabel="TextFieldsStackView">
+                                    <rect key="frame" x="16" y="202.66666666666669" width="361" height="205"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="epz-sD-1TJ" userLabel="PhoneTextField" customClass="PhoneTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="120"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="phone_number"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="phone_number"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-d2-qvA" userLabel="PasswordTextField" customClass="PasswordTextField" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="124" width="361" height="50"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRequiredProperty" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleTxt" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isLabelHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="placeHolderTxt" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isButtonHidden" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="buttonIcon" value="eye.slash.fill" catalog="system"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="stackBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="requiredTxt" value="*"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mc5-Vd-tD2" userLabel="ForgetPasswordStackView">
+                                            <rect key="frame" x="0.0" y="178" width="361" height="27"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2F-Cl-HVQ" userLabel="ForgetPassword">
+                                                    <rect key="frame" x="0.0" y="0.0" width="38" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" name="RedFont"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="forgot_password"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isUnderlined" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapForgetPassword:" destination="-1" eventType="touchUpInside" id="usG-D5-F4K"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="194" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BA9-0Q-TmI">
+                                    <rect key="frame" x="16" y="431.66666666666663" width="361" height="194"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="151" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayT-ce-chB" userLabel="Login" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="194"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="pDq-ve-gTi"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bio-sk-001" userLabel="BiometricStackView">
+                                    <rect key="frame" x="138.66666666666666" y="649.66666666666663" width="116" height="79"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bio-lb-001">
+                                            <rect key="frame" x="40.333333333333343" y="0.0" width="35.333333333333343" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" name="secondaryDarkFontColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="biometric_login_hint"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bio-sk-002" userLabel="BiometricButtonsStack">
+                                            <rect key="frame" x="0.0" y="29" width="116" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bio-bt-001" userLabel="FaceIDButton">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="bio-hc-001"/>
+                                                        <constraint firstAttribute="width" constant="50" id="bio-wc-001"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="face-id"/>
+                                                    <connections>
+                                                        <action selector="didTapFaceID:" destination="-1" eventType="touchUpInside" id="bio-act-001"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bio-bt-002" userLabel="TouchIDButton">
+                                                    <rect key="frame" x="66" y="0.0" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="bio-hc-002"/>
+                                                        <constraint firstAttribute="width" constant="50" id="bio-wc-002"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="fingerprint-scan"/>
+                                                    <connections>
+                                                        <action selector="didTapTouchID:" destination="-1" eventType="touchUpInside" id="bio-act-002"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tyn-iU-cki" userLabel="SignupStackView">
+                                    <rect key="frame" x="151.66666666666666" y="752.66666666666663" width="90" height="69"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-Ga-COd">
+                                            <rect key="frame" x="8.3333333333333428" y="0.0" width="73" height="27"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg9-tS-BKP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="no_account"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pib-cW-A7N" userLabel="CreateAccount">
+                                                    <rect key="frame" x="35" y="0.0" width="38" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" name="Main"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="create_account"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isUnderlined" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapCreateAccount:" destination="-1" eventType="touchUpInside" id="Zpa-BY-9U0"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aec-O6-scY" customClass="IconTextGeneralButton" customModule="GasmanProvider" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="35" width="90" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="4af-8F-CEy"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="rdi-mx-aZQ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconImageName" value="translate"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="buttonLabelText" value="arabic"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="btnBackgroundColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="btnBorderColor">
+                                                    <color key="value" name="Main"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                                    <color key="value" name="Main"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="6xl-rq-ciW" secondAttribute="trailing" constant="32" id="4aO-yi-Gm8"/>
+                                <constraint firstAttribute="trailing" secondItem="tiS-i7-LJt" secondAttribute="trailing" constant="16" id="BN2-9P-36M"/>
+                                <constraint firstItem="6xl-rq-ciW" firstAttribute="leading" secondItem="uSw-Z8-0Cd" secondAttribute="leading" constant="32" id="SBO-1o-WNj"/>
+                                <constraint firstItem="BA9-0Q-TmI" firstAttribute="leading" secondItem="uSw-Z8-0Cd" secondAttribute="leading" constant="16" id="bCf-K7-CNx"/>
+                                <constraint firstAttribute="trailing" secondItem="BA9-0Q-TmI" secondAttribute="trailing" constant="16" id="igg-Ud-Efs"/>
+                                <constraint firstItem="tiS-i7-LJt" firstAttribute="leading" secondItem="uSw-Z8-0Cd" secondAttribute="leading" constant="16" id="n1L-t3-DuH"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="trailing" secondItem="f5C-bh-5Jg" secondAttribute="trailing" id="IVi-a8-0om"/>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="height" secondItem="Wzf-H6-ymc" secondAttribute="height" priority="250" id="OZC-CC-oho"/>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="leading" secondItem="f5C-bh-5Jg" secondAttribute="leading" id="PDb-0B-sLH"/>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="top" secondItem="f5C-bh-5Jg" secondAttribute="top" id="e6j-6y-A6O"/>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="width" secondItem="Wzf-H6-ymc" secondAttribute="width" id="pUF-cq-MLW"/>
+                        <constraint firstItem="uSw-Z8-0Cd" firstAttribute="bottom" secondItem="f5C-bh-5Jg" secondAttribute="bottom" id="qe3-6L-l4G"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="f5C-bh-5Jg"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Wzf-H6-ymc"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gQb-qK-Osy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="99k-sE-SvO"/>
+                <constraint firstItem="gQb-qK-Osy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GQR-ob-e8S"/>
+                <constraint firstItem="gQb-qK-Osy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HVM-5f-WaK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gQb-qK-Osy" secondAttribute="bottom" id="Ps4-Xl-gMk"/>
+            </constraints>
+            <point key="canvasLocation" x="109.16030534351144" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="appIcon" width="275" height="150"/>
+        <image name="eye.slash.fill" catalog="system" width="128" height="96"/>
+        <image name="face-id" width="24" height="24"/>
+        <image name="fingerprint-scan" width="24" height="24"/>
+        <image name="translate" width="24" height="24"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedFont">
+            <color red="0.85490196078431369" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryDarkFontColor">
+            <color red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

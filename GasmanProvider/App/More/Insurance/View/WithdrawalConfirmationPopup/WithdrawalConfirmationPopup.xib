@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WithdrawalConfirmationPopup" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="amt-lbl-001" id="amt-out-1"/>
+                <outlet property="backView" destination="bck-vw-002" id="bck-out-2"/>
+                <outlet property="confirmButton" destination="cnf-btn-002" id="cnf-out-2"/>
+                <outlet property="contentView" destination="cnt-vw-002" id="cnt-out-2"/>
+                <outlet property="titleLabel" destination="ttl-lbl-002" id="ttl-out-2"/>
+                <outlet property="view" destination="root-vw-1" id="root-out-1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="root-vw-1">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bck-vw-002" userLabel="BackView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-vw-002" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="617.66666666666663" width="393" height="234.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="main-stk-002" userLabel="MainStack">
+                            <rect key="frame" x="16" y="24" width="361" height="186.33333333333334"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-lbl-002" userLabel="titleLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="21.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amt-lbl-001" userLabel="amountLabel">
+                                    <rect key="frame" x="0.0" y="41.66666666666675" width="361" height="76.666666666666686"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="64"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnf-btn-002" userLabel="confirmButton" customClass="MainButton" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="138.33333333333337" width="361" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="cnf-h-c-2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="Confirm"/>
+                                    <connections>
+                                        <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="cnf-act-2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="main-stk-002" secondAttribute="bottom" constant="24" id="stk-b-c-2"/>
+                        <constraint firstItem="main-stk-002" firstAttribute="leading" secondItem="cnt-vw-002" secondAttribute="leading" constant="16" id="stk-l-c-2"/>
+                        <constraint firstItem="main-stk-002" firstAttribute="top" secondItem="cnt-vw-002" secondAttribute="top" constant="24" id="stk-t-c-2"/>
+                        <constraint firstAttribute="trailing" secondItem="main-stk-002" secondAttribute="trailing" constant="16" id="stk-tr-c-2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bck-vw-002" firstAttribute="bottom" secondItem="root-vw-1" secondAttribute="bottom" id="bck-b-c-2"/>
+                <constraint firstItem="bck-vw-002" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bck-l-c-2"/>
+                <constraint firstItem="bck-vw-002" firstAttribute="top" secondItem="root-vw-1" secondAttribute="top" id="bck-t-c-2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bck-vw-002" secondAttribute="trailing" id="bck-tr-c-2"/>
+                <constraint firstItem="cnt-vw-002" firstAttribute="bottom" secondItem="root-vw-1" secondAttribute="bottom" id="cnt-b-c-2"/>
+                <constraint firstItem="cnt-vw-002" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cnt-l-c-2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cnt-vw-002" secondAttribute="trailing" id="cnt-tr-c-2"/>
+            </constraints>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

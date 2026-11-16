@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabeledNoteView" customModule="GasMan" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="LNV-content" id="LNV-content-conn"/>
+                <outlet property="titleLabel" destination="LNV-title" id="LNV-title-conn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LNV-root">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="152"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-vstack">
+                    <rect key="frame" x="12" y="16" width="344" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" placeholderIntrinsicWidth="344" placeholderIntrinsicHeight="101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-title" userLabel="titleLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="95"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-Sg-Iaz">
+                            <rect key="frame" x="0.0" y="107" width="344" height="1"/>
+                            <color key="backgroundColor" name="TextFieldBorder"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="nH9-Tz-6YT"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-content" userLabel="contentLabel">
+                            <rect key="frame" x="0.0" y="120" width="344" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LNV-vstack" secondAttribute="bottom" constant="16" id="H5q-66-mOC"/>
+                <constraint firstAttribute="trailing" secondItem="LNV-vstack" secondAttribute="trailing" constant="12" id="cnD-dW-j7Z"/>
+                <constraint firstItem="LNV-vstack" firstAttribute="top" secondItem="LNV-root" secondAttribute="top" constant="16" id="kjR-Mr-oYz"/>
+                <constraint firstItem="LNV-vstack" firstAttribute="leading" secondItem="LNV-root" secondAttribute="leading" constant="12" id="uki-NL-iNZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                    <color key="value" name="TextFieldBorder"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="12.213740458015266" y="45.070422535211272"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

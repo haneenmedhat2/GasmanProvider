@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvoiceDetailsVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="clientInfoView" destination="IDV-clientInfo" id="IDV-clientInfo-conn"/>
+                <outlet property="dateLabel" destination="IDV-date" id="IDV-date-conn"/>
+                <outlet property="openInvoiceButton" destination="IDV-open" id="IDV-open-conn"/>
+                <outlet property="orderNumberLabel" destination="IDV-orderNum" id="IDV-orderNum-conn"/>
+                <outlet property="orderSummaryView" destination="IDV-summary" id="IDV-summary-conn"/>
+                <outlet property="scrollView" destination="IDV-scroll" id="IDV-scroll-conn"/>
+                <outlet property="tableView" destination="IDV-table" id="IDV-table-conn"/>
+                <outlet property="timeLabel" destination="IDV-time" id="IDV-time-conn"/>
+                <outlet property="view" destination="IDV-root" id="IDV-view-conn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="IDV-root">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-scroll">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-container">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="592.33333333333337"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-header">
+                                    <rect key="frame" x="16" y="15.999999999999998" width="361" height="19.333333333333329"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-orderNum">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-dateRow">
+                                    <rect key="frame" x="16" y="51.333333333333343" width="361" height="32"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="176.66666666666666" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-dateView">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-dateInner">
+                                                    <rect key="frame" x="8" y="8" width="160.66666666666666" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-01" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-dateIco">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="IDV-dateIco-h"/>
+                                                                <constraint firstAttribute="width" constant="16" id="IDV-dateIco-w"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-date">
+                                                            <rect key="frame" x="24" y="0.0" width="136.66666666666666" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="IDV-dateInner" secondAttribute="bottom" constant="8" id="IDV-dateInner-b"/>
+                                                <constraint firstItem="IDV-dateInner" firstAttribute="leading" secondItem="IDV-dateView" secondAttribute="leading" constant="8" id="IDV-dateInner-l"/>
+                                                <constraint firstItem="IDV-dateInner" firstAttribute="top" secondItem="IDV-dateView" secondAttribute="top" constant="8" id="IDV-dateInner-t"/>
+                                                <constraint firstAttribute="trailing" secondItem="IDV-dateInner" secondAttribute="trailing" constant="8" id="IDV-dateInner-tr"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-timeView">
+                                            <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="32"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-timeInner">
+                                                    <rect key="frame" x="8" y="8" width="160.33333333333334" height="16"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-03" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-timeIco">
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="IDV-timeIco-h"/>
+                                                                <constraint firstAttribute="width" constant="16" id="IDV-timeIco-w"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="--:--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-time">
+                                                            <rect key="frame" x="24" y="0.0" width="136.33333333333334" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="MainWithAlpha"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="IDV-timeInner" secondAttribute="bottom" constant="8" id="IDV-timeInner-b"/>
+                                                <constraint firstItem="IDV-timeInner" firstAttribute="leading" secondItem="IDV-timeView" secondAttribute="leading" constant="8" id="IDV-timeInner-l"/>
+                                                <constraint firstItem="IDV-timeInner" firstAttribute="top" secondItem="IDV-timeView" secondAttribute="top" constant="8" id="IDV-timeInner-t"/>
+                                                <constraint firstAttribute="trailing" secondItem="IDV-timeInner" secondAttribute="trailing" constant="8" id="IDV-timeInner-tr"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="100" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-table" customClass="TableViewContentSized" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="99.333333333333343" width="361" height="100"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-summary" customClass="OrderSummaryView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="215.33333333333331" width="361" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-clientInfo" customClass="ClientInfoView" customModule="GasmanProvider" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="431.33333333333337" width="361" height="100"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-open">
+                                    <rect key="frame" x="16" y="547.33333333333337" width="361" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="open">
+                                        <color key="titleColor" name="Main"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didTapOpenInvoice:" destination="-1" eventType="touchUpInside" id="IDV-open-act"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="IDV-clientInfo" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" constant="16" id="IDV-ci-l"/>
+                                <constraint firstAttribute="trailing" secondItem="IDV-clientInfo" secondAttribute="trailing" constant="16" id="IDV-ci-tr"/>
+                                <constraint firstItem="IDV-header" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" constant="16" id="IDV-hdr-l"/>
+                                <constraint firstAttribute="trailing" secondItem="IDV-header" secondAttribute="trailing" constant="16" id="IDV-hdr-tr"/>
+                                <constraint firstItem="IDV-open" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" constant="16" id="IDV-open-l"/>
+                                <constraint firstAttribute="trailing" secondItem="IDV-open" secondAttribute="trailing" constant="16" id="IDV-open-tr"/>
+                                <constraint firstItem="IDV-summary" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" constant="16" id="IDV-sum-l"/>
+                                <constraint firstAttribute="trailing" secondItem="IDV-summary" secondAttribute="trailing" constant="16" id="IDV-sum-tr"/>
+                                <constraint firstItem="IDV-table" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" constant="16" id="IDV-tbl-l"/>
+                                <constraint firstAttribute="trailing" secondItem="IDV-table" secondAttribute="trailing" constant="16" id="IDV-tbl-tr"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IDV-container" firstAttribute="bottom" secondItem="IDV-flg" secondAttribute="bottom" id="IDV-flg-b"/>
+                        <constraint firstItem="IDV-flg" firstAttribute="leading" secondItem="IDV-container" secondAttribute="leading" id="IDV-flg-l"/>
+                        <constraint firstItem="IDV-flg" firstAttribute="top" secondItem="IDV-container" secondAttribute="top" id="IDV-flg-t"/>
+                        <constraint firstItem="IDV-container" firstAttribute="trailing" secondItem="IDV-flg" secondAttribute="trailing" id="IDV-flg-tr"/>
+                        <constraint firstItem="IDV-container" firstAttribute="width" secondItem="IDV-frame" secondAttribute="width" id="IDV-frame-w"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="IDV-flg"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="IDV-frame"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="IDV-safe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="IDV-scroll" firstAttribute="bottom" secondItem="IDV-safe" secondAttribute="bottom" id="IDV-sc-b"/>
+                <constraint firstItem="IDV-scroll" firstAttribute="leading" secondItem="IDV-safe" secondAttribute="leading" id="IDV-sc-l"/>
+                <constraint firstItem="IDV-scroll" firstAttribute="top" secondItem="IDV-safe" secondAttribute="top" id="IDV-sc-t"/>
+                <constraint firstItem="IDV-safe" firstAttribute="trailing" secondItem="IDV-scroll" secondAttribute="trailing" id="IDV-sc-tr"/>
+            </constraints>
+            <point key="canvasLocation" x="-248" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-01" width="16" height="16"/>
+        <image name="clock-03" width="16" height="16"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainWithAlpha">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

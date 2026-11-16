@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="awp-01-cel" customClass="AddWorkPlaceCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="awp-01-cel" id="awp-02-cnt">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="awp-03-out" userLabel="containerStackView">
+                        <rect key="frame" x="0.0" y="8" width="361" height="64"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="awp-04-txt" userLabel="textStack">
+                                <rect key="frame" x="12" y="13" width="313" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حي العروبة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awp-05-nam" userLabel="neighborhoodNameLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="LabelBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مدينة الرياض" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awp-06-cty" userLabel="cityNameLabel">
+                                        <rect key="frame" x="0.0" y="21" width="313" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="HintGray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="awp-07-chk" userLabel="checkboxImageView">
+                                <rect key="frame" x="333" y="24" width="16" height="16"/>
+                                <color key="tintColor" name="HintGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="awp-ct-001"/>
+                                    <constraint firstAttribute="width" secondItem="awp-07-chk" secondAttribute="height" multiplier="1:1" id="awp-ct-002"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                <color key="value" name="BorderColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="awp-03-out" firstAttribute="top" secondItem="awp-02-cnt" secondAttribute="top" constant="8" id="awp-ct-003"/>
+                    <constraint firstItem="awp-03-out" firstAttribute="leading" secondItem="awp-02-cnt" secondAttribute="leading" id="awp-ct-004"/>
+                    <constraint firstAttribute="trailing" secondItem="awp-03-out" secondAttribute="trailing" id="awp-ct-005"/>
+                    <constraint firstAttribute="bottom" secondItem="awp-03-out" secondAttribute="bottom" constant="8" id="awp-ct-006"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkboxImageView" destination="awp-07-chk" id="awp-ot-004"/>
+                <outlet property="cityNameLabel" destination="awp-06-cty" id="awp-ot-003"/>
+                <outlet property="containerStackView" destination="awp-03-out" id="awp-ot-001"/>
+                <outlet property="neighborhoodNameLabel" destination="awp-05-nam" id="awp-ot-002"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="100"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" width="128" height="128"/>
+        <namedColor name="BorderColor">
+            <color red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="HintGray">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

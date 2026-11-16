@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticsVC" customModule="GasmanProvider" customModuleProvider="target">
+            <connections>
+                <outlet property="dailyButton" destination="day-btn" id="day-out"/>
+                <outlet property="dateFromTextField" destination="dt-frm-tf" id="dt-frm-out"/>
+                <outlet property="dateToTextField" destination="dt-to-tf" id="dt-to-out"/>
+                <outlet property="featuredCardView" destination="ftd-crd" id="ftd-crd-out"/>
+                <outlet property="featuredIconContainerView" destination="ftd-ico-con" id="ftd-ico-con-out"/>
+                <outlet property="featuredIconImageView" destination="ftd-ico-img" id="ftd-ico-img-out"/>
+                <outlet property="featuredTitleLabel" destination="ftd-ttl" id="ftd-ttl-out"/>
+                <outlet property="featuredValueLabel" destination="ftd-val" id="ftd-val-out"/>
+                <outlet property="generalContainerView" destination="gen-con" id="gen-con-out"/>
+                <outlet property="monthlyButton" destination="mon-btn" id="mon-out"/>
+                <outlet property="statsCollectionView" destination="sts-col" id="sts-col-out"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weeklyButton" destination="wek-btn" id="wek-out"/>
+                <outlet property="yearlyButton" destination="yr-btn" id="yr-out"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scr-001">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-stk" userLabel="ContainerStackView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="631"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="per-stk" userLabel="PeriodButtonsStackView">
+                                    <rect key="frame" x="16" y="16" width="361" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="day-btn" userLabel="dailyButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="day-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="daily"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapDaily:" destination="-1" eventType="touchUpInside" id="day-act"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wek-btn" userLabel="weeklyButton">
+                                            <rect key="frame" x="92.333333333333343" y="0.0" width="84.333333333333343" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="wek-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="weekly"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapWeekly:" destination="-1" eventType="touchUpInside" id="wek-act"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mon-btn" userLabel="monthlyButton">
+                                            <rect key="frame" x="184.66666666666666" y="0.0" width="83.999999999999972" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="mon-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="monthly"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapMonthly:" destination="-1" eventType="touchUpInside" id="mon-act"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yr-btn" userLabel="yearlyButton">
+                                            <rect key="frame" x="276.66666666666669" y="0.0" width="84.333333333333314" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="yr-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="yearly"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapYearly:" destination="-1" eventType="touchUpInside" id="yr-act"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dt-stk" userLabel="FilterStackView">
+                                    <rect key="frame" x="16" y="72" width="361" height="44"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="114-WS-h6W" userLabel="DateStackView">
+                                            <rect key="frame" x="0.0" y="0.0" width="309" height="44"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mZ5-Yx-5Xc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="44"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-02" translatesAutoresizingMaskIntoConstraints="NO" id="5e5-e1-h3H">
+                                                            <rect key="frame" x="8" y="14" width="16" height="16"/>
+                                                            <color key="tintColor" name="TextFieldBorder"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="YWC-wY-V5l"/>
+                                                                <constraint firstAttribute="height" constant="16" id="tng-6a-U9a"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dt-frm-tf" userLabel="dateFromTextField">
+                                                            <rect key="frame" x="28.000000000000007" y="11" width="114.66666666666669" height="22"/>
+                                                            <color key="tintColor" name="Main"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="date_from_placeholder"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
+                                                    </subviews>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                                            <color key="value" name="TextFieldBorder"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-oF-hUt">
+                                                    <rect key="frame" x="158.66666666666663" y="0.0" width="150.33333333333337" height="44"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-02" translatesAutoresizingMaskIntoConstraints="NO" id="MPW-6K-p72">
+                                                            <rect key="frame" x="8" y="14" width="16" height="16"/>
+                                                            <color key="tintColor" name="TextFieldBorder"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="JDo-K5-Alw"/>
+                                                                <constraint firstAttribute="width" constant="16" id="XRB-3d-1Ym"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="dt-to-tf" userLabel="dateToTextField">
+                                                            <rect key="frame" x="27.999999999999993" y="11" width="114.33333333333331" height="22"/>
+                                                            <color key="tintColor" name="Main"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="date_to_placeholder"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </textField>
+                                                    </subviews>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                                            <color key="value" name="TextFieldBorder"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flt-btn" userLabel="filterButton">
+                                            <rect key="frame" x="317" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="flt-h"/>
+                                                <constraint firstAttribute="width" constant="44" id="flt-w"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" image="filter-horizontal"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                    <real key="value" value="12"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                                    <color key="value" name="TextFieldBorder"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapFilterReset:" destination="-1" eventType="touchUpInside" id="flt-act"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gen-con" userLabel="generalContainerView">
+                                    <rect key="frame" x="16" y="128" width="361" height="487"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gen-stk">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="487"/>
+                                            <subviews>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-crd" userLabel="featuredCardView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="56"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-inner-stk">
+                                                            <rect key="frame" x="12" y="12" width="337" height="32"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-ico-con" userLabel="featuredIconContainerView">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                                    <subviews>
+                                                                        <imageView contentMode="scaleAspectFit" image="shipping-truck-01" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-ico-img" userLabel="featuredIconImageView">
+                                                                            <rect key="frame" x="6" y="6" width="20" height="20"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="20" id="eYj-Jo-C5E"/>
+                                                                                <constraint firstAttribute="height" constant="20" id="fcD-wa-t3A"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" name="Main"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="ftd-ico-img" firstAttribute="centerX" secondItem="ftd-ico-con" secondAttribute="centerX" id="ftd-cx"/>
+                                                                        <constraint firstItem="ftd-ico-img" firstAttribute="centerY" secondItem="ftd-ico-con" secondAttribute="centerY" id="ftd-cy"/>
+                                                                        <constraint firstAttribute="height" constant="32" id="ftd-ico-con-h"/>
+                                                                        <constraint firstAttribute="width" constant="32" id="ftd-ico-con-w"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                                            <real key="value" value="8"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-txt-stk">
+                                                                    <rect key="frame" x="44" y="0.0" width="293" height="32"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-ttl" userLabel="featuredTitleLabel">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="293" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-val" userLabel="featuredValueLabel">
+                                                                            <rect key="frame" x="0.0" y="21" width="293" height="11"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="moreBG"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="ftd-inner-stk" secondAttribute="bottom" constant="12" id="ftd-stk-b"/>
+                                                        <constraint firstItem="ftd-inner-stk" firstAttribute="leading" secondItem="ftd-crd" secondAttribute="leading" constant="12" id="ftd-stk-l"/>
+                                                        <constraint firstItem="ftd-inner-stk" firstAttribute="top" secondItem="ftd-crd" secondAttribute="top" constant="12" id="ftd-stk-t"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ftd-inner-stk" secondAttribute="trailing" constant="12" id="ftd-stk-tr"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <collectionView opaque="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sts-col" customClass="CollectionViewContentSized" customModule="GasmanProvider" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="487"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="flow-001">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="gen-stk" secondAttribute="bottom" id="gen-stk-b"/>
+                                        <constraint firstItem="gen-stk" firstAttribute="leading" secondItem="gen-con" secondAttribute="leading" id="gen-stk-l"/>
+                                        <constraint firstItem="gen-stk" firstAttribute="top" secondItem="gen-con" secondAttribute="top" id="gen-stk-t"/>
+                                        <constraint firstAttribute="trailing" secondItem="gen-stk" secondAttribute="trailing" id="gen-stk-tr"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="cnt-stk" firstAttribute="height" secondItem="MCZ-flg" secondAttribute="height" priority="250" id="Lgo-aD-0CC"/>
+                        <constraint firstItem="cnt-stk" firstAttribute="bottom" secondItem="oqR-clg" secondAttribute="bottom" id="cnt-b-c"/>
+                        <constraint firstItem="cnt-stk" firstAttribute="leading" secondItem="oqR-clg" secondAttribute="leading" id="cnt-l-c"/>
+                        <constraint firstItem="cnt-stk" firstAttribute="top" secondItem="oqR-clg" secondAttribute="top" id="cnt-t-c"/>
+                        <constraint firstItem="cnt-stk" firstAttribute="trailing" secondItem="oqR-clg" secondAttribute="trailing" id="cnt-tr-c"/>
+                        <constraint firstItem="cnt-stk" firstAttribute="width" secondItem="MCZ-flg" secondAttribute="width" id="cnt-w-c"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="oqR-clg"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="MCZ-flg"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="scr-001" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4uW-oE-N7z"/>
+                <constraint firstItem="scr-001" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YgX-2E-h3G"/>
+                <constraint firstItem="scr-001" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="oBh-qm-NY0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="scr-001" secondAttribute="trailing" id="wSY-cG-p2Q"/>
+            </constraints>
+            <point key="canvasLocation" x="-0.76335877862595414" y="0.0"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar-02" width="16" height="16"/>
+        <image name="filter-horizontal" width="16" height="16"/>
+        <image name="shipping-truck-01" width="20" height="20"/>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="moreBG">
+            <color red="0.97254901960784312" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

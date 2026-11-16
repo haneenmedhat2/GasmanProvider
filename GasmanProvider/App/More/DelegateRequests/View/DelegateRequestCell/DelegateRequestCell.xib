@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DelegateRequestCell" rowHeight="150" id="drc-001" customClass="DelegateRequestCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drc-001" id="drc-content">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drc-container">
+                        <rect key="frame" x="0.0" y="8" width="379" height="134"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-75-OxV">
+                                <rect key="frame" x="16" y="16" width="347" height="102"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="drc-avatar">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="drc-avatar-h"/>
+                                            <constraint firstAttribute="width" constant="44" id="drc-avatar-w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WFQ-lH-hVD">
+                                        <rect key="frame" x="56" y="0.0" width="291" height="71.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drc-name">
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="drc-btn-stk">
+                                                <rect key="frame" x="0.0" y="27.333333333333336" width="291" height="44.000000000000007"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drc-approve">
+                                                        <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="44"/>
+                                                        <color key="backgroundColor" name="Main"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="drc-approve-h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <state key="normal" title="accept">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="accept"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didTapApprove:" destination="drc-001" eventType="touchUpInside" id="drc-approve-act"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drc-reject">
+                                                        <rect key="frame" x="151.66666666666663" y="0.0" width="139.33333333333337" height="44"/>
+                                                        <color key="backgroundColor" name="RedFont"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="drc-reject-h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                        <state key="normal" title="reject">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="reject"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didTapReject:" destination="drc-001" eventType="touchUpInside" id="drc-reject-act"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KXu-75-OxV" firstAttribute="top" secondItem="drc-container" secondAttribute="top" constant="16" id="BTi-ug-tzq"/>
+                            <constraint firstAttribute="trailing" secondItem="KXu-75-OxV" secondAttribute="trailing" constant="16" id="hUa-I6-j8H"/>
+                            <constraint firstItem="KXu-75-OxV" firstAttribute="leading" secondItem="drc-container" secondAttribute="leading" constant="16" id="lsB-JT-PQ3"/>
+                            <constraint firstAttribute="bottom" secondItem="KXu-75-OxV" secondAttribute="bottom" constant="16" id="siZ-93-a9g"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="drc-container" secondAttribute="bottom" constant="8" id="drc-cnt-b"/>
+                    <constraint firstItem="drc-container" firstAttribute="leading" secondItem="drc-content" secondAttribute="leading" id="drc-cnt-l"/>
+                    <constraint firstItem="drc-container" firstAttribute="top" secondItem="drc-content" secondAttribute="top" constant="8" id="drc-cnt-t"/>
+                    <constraint firstAttribute="trailing" secondItem="drc-container" secondAttribute="trailing" id="drc-cnt-tr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="approveButton" destination="drc-approve" id="drc-approve-out"/>
+                <outlet property="avatarImageView" destination="drc-avatar" id="drc-avatar-out"/>
+                <outlet property="containerView" destination="drc-container" id="drc-container-out"/>
+                <outlet property="nameLabel" destination="drc-name" id="drc-name-out"/>
+                <outlet property="rejectButton" destination="drc-reject" id="drc-reject-out"/>
+            </connections>
+            <point key="canvasLocation" x="64.885496183206101" y="90.140845070422543"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedFont">
+            <color red="0.85490196078431369" green="0.0039215686274509803" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

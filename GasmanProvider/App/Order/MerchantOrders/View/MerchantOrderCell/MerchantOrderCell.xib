@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="-57" id="cell" customClass="MerchantOrderCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="594" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cell" id="cnt">
+                <rect key="frame" x="0.0" y="0.0" width="594" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mo-main-stk" userLabel="ContainerStackView">
+                        <rect key="frame" x="0.0" y="8" width="594" height="184"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" image="smallAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="mo-logo-img">
+                                <rect key="frame" x="12" y="59.666666666666671" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="mo-logo-h"/>
+                                    <constraint firstAttribute="width" constant="65" id="mo-logo-w"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mo-content-stk" userLabel="ContentStackView">
+                                <rect key="frame" x="85" y="22.333333333333329" width="497" height="139.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mo-hdr-stk" userLabel="OrderNumStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="497" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الطلب #84521" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-ord-num-lbl">
+                                                <rect key="frame" x="0.0" y="15.333333333333334" width="127.33333333333333" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mo-badge-vw">
+                                                <rect key="frame" x="441.66666666666663" y="0.0" width="55.333333333333314" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جديدة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-status-lbl">
+                                                        <rect key="frame" x="11.999999999999998" y="4.0000000000000036" width="31.333333333333329" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="mo-status-lbl" secondAttribute="bottom" constant="4" id="mo-b-b"/>
+                                                    <constraint firstItem="mo-status-lbl" firstAttribute="leading" secondItem="mo-badge-vw" secondAttribute="leading" constant="12" id="mo-b-l"/>
+                                                    <constraint firstItem="mo-status-lbl" firstAttribute="top" secondItem="mo-badge-vw" secondAttribute="top" constant="4" id="mo-b-t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mo-status-lbl" secondAttribute="trailing" constant="12" id="mo-b-tr"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="نوع المنتج" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-prod-lbl">
+                                        <rect key="frame" x="0.0" y="58.000000000000007" width="497" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="mainDarkFontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="نوع الطلب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-type-lbl">
+                                        <rect key="frame" x="0.0" y="80.333333333333343" width="497" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="mainDarkFontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="وقت الطلب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-time-lbl">
+                                        <rect key="frame" x="0.0" y="102.66666666666667" width="497" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="mainDarkFontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="تاريخ الطلب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-date-lbl">
+                                        <rect key="frame" x="0.0" y="125.00000000000001" width="497" height="14.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="mainDarkFontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حي المنصورة , المدينة المنورة" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-loc-lbl">
+                                        <rect key="frame" x="0.0" y="139.33333333333331" width="497" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سبب الرفض" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo-reason-lbl">
+                                        <rect key="frame" x="0.0" y="139.33333333333331" width="497" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="mainDarkFontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                <color key="value" name="TextFieldBorder"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mo-main-stk" secondAttribute="bottom" constant="8" id="mo-stk-bot"/>
+                    <constraint firstItem="mo-main-stk" firstAttribute="leading" secondItem="cnt" secondAttribute="leading" id="mo-stk-lead"/>
+                    <constraint firstItem="mo-main-stk" firstAttribute="top" secondItem="cnt" secondAttribute="top" constant="8" id="mo-stk-top"/>
+                    <constraint firstAttribute="trailing" secondItem="mo-main-stk" secondAttribute="trailing" id="mo-stk-trail"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationLabel" destination="mo-loc-lbl" id="mo-out-loc"/>
+                <outlet property="logoImageView" destination="mo-logo-img" id="mo-out-logo"/>
+                <outlet property="orderDateLabel" destination="mo-date-lbl" id="mo-out-date"/>
+                <outlet property="orderNumLabel" destination="mo-ord-num-lbl" id="mo-out-num"/>
+                <outlet property="orderTimeLabel" destination="mo-time-lbl" id="mo-out-time"/>
+                <outlet property="orderTypeLabel" destination="mo-type-lbl" id="mo-out-type"/>
+                <outlet property="productTypeLabel" destination="mo-prod-lbl" id="mo-out-prod"/>
+                <outlet property="rejectReasonLabel" destination="mo-reason-lbl" id="mo-out-reason"/>
+                <outlet property="statusBadgeView" destination="mo-badge-vw" id="mo-out-badge"/>
+                <outlet property="statusLabel" destination="mo-status-lbl" id="mo-out-status"/>
+            </connections>
+            <point key="canvasLocation" x="404.58015267175568" y="130.98591549295776"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="smallAppIcon" width="65" height="69.666664123535156"/>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainDarkFontColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

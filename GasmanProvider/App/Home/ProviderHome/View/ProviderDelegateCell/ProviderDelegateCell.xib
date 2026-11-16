@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProviderDelegateCell" rowHeight="120" id="pdc-001" customClass="ProviderDelegateCell" customModule="GasmanProvider" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pdc-001" id="pdc-content">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-container">
+                        <rect key="frame" x="0.0" y="8" width="418" height="104"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SWN-6C-3Rl">
+                                <rect key="frame" x="0.0" y="0.0" width="418" height="104"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-avatar">
+                                        <rect key="frame" x="12" y="12" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="pdc-avatar-h"/>
+                                            <constraint firstAttribute="width" constant="44" id="pdc-avatar-w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-hB-ZFS">
+                                        <rect key="frame" x="68" y="12.000000000000004" width="338" height="59.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-name">
+                                                <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="secondaryDarkFontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="176" placeholderIntrinsicHeight="32" translatesAutoresizingMaskIntoConstraints="NO" id="Myp-eB-tJb">
+                                                <rect key="frame" x="0.0" y="27.333333333333336" width="338" height="32"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iXV-gs-EZo">
+                                                        <rect key="frame" x="8" y="8" width="322" height="16"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smart-phone-03" translatesAutoresizingMaskIntoConstraints="NO" id="zi4-a8-J9c">
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="UPO-0l-OHF"/>
+                                                                    <constraint firstAttribute="width" constant="16" id="zU1-ce-EHU"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWv-gv-9YX">
+                                                                <rect key="frame" x="24" y="0.0" width="298" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <color key="textColor" name="hintColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="client_phone_number"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" name="TextFieldBackground"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="iXV-gs-EZo" secondAttribute="bottom" constant="8" id="Cju-oK-Im9"/>
+                                                    <constraint firstItem="iXV-gs-EZo" firstAttribute="leading" secondItem="Myp-eB-tJb" secondAttribute="leading" constant="8" id="Hun-f1-YEq"/>
+                                                    <constraint firstItem="iXV-gs-EZo" firstAttribute="top" secondItem="Myp-eB-tJb" secondAttribute="top" constant="8" id="dnZ-TN-grq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iXV-gs-EZo" secondAttribute="trailing" constant="8" id="p5F-AL-OWM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SWN-6C-3Rl" firstAttribute="top" secondItem="pdc-container" secondAttribute="top" id="Bjl-BP-dil"/>
+                            <constraint firstAttribute="bottom" secondItem="SWN-6C-3Rl" secondAttribute="bottom" id="U2K-fl-hEx"/>
+                            <constraint firstItem="SWN-6C-3Rl" firstAttribute="leading" secondItem="pdc-container" secondAttribute="leading" id="tr8-nd-J2o"/>
+                            <constraint firstAttribute="trailing" secondItem="SWN-6C-3Rl" secondAttribute="trailing" id="udH-3P-Qk0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pdc-container" secondAttribute="bottom" constant="8" id="pdc-cnt-b"/>
+                    <constraint firstItem="pdc-container" firstAttribute="leading" secondItem="pdc-content" secondAttribute="leading" id="pdc-cnt-l"/>
+                    <constraint firstItem="pdc-container" firstAttribute="top" secondItem="pdc-content" secondAttribute="top" constant="8" id="pdc-cnt-t"/>
+                    <constraint firstAttribute="trailing" secondItem="pdc-container" secondAttribute="trailing" id="pdc-cnt-tr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="pdc-avatar" id="pdc-avatar-out"/>
+                <outlet property="containerView" destination="pdc-container" id="pdc-container-out"/>
+                <outlet property="nameLabel" destination="pdc-name" id="pdc-name-out"/>
+                <outlet property="phoneLabel" destination="GWv-gv-9YX" id="o4B-3W-9nW"/>
+            </connections>
+            <point key="canvasLocation" x="122.13740458015266" y="79.577464788732399"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="smart-phone-03" width="15" height="15"/>
+        <namedColor name="TextFieldBackground">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hintColor">
+            <color red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondaryDarkFontColor">
+            <color red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

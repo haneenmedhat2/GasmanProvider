@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="MoreCell" customModule="GasMan" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-aT-qwL" userLabel="ContainerStackView">
+                        <rect key="frame" x="0.0" y="8" width="393" height="98"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTT-dz-nn8">
+                                <rect key="frame" x="10" y="37" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jTT-dz-nn8" secondAttribute="height" multiplier="1:1" id="Xyc-a1-AXd"/>
+                                    <constraint firstAttribute="width" constant="24" id="ddC-nX-jbI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLh-WT-eak">
+                                <rect key="frame" x="42" y="42" width="266" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CV6-BL-5aD">
+                                <rect key="frame" x="316" y="35" width="63" height="28"/>
+                                <color key="onTintColor" name="Main"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="16"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="cBV-aT-qwL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PAI-WB-2tc"/>
+                    <constraint firstItem="cBV-aT-qwL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="PmK-Ko-x8Y"/>
+                    <constraint firstAttribute="bottom" secondItem="cBV-aT-qwL" secondAttribute="bottom" constant="8" id="TBK-5X-N6d"/>
+                    <constraint firstAttribute="trailing" secondItem="cBV-aT-qwL" secondAttribute="trailing" id="a60-0Z-xBQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cellIcon" destination="jTT-dz-nn8" id="Usx-tK-Qbv"/>
+                <outlet property="cellTitle" destination="aLh-WT-eak" id="ckl-YF-iFd"/>
+                <outlet property="containerStackView" destination="cBV-aT-qwL" id="vpL-Ah-9JG"/>
+                <outlet property="notificationSwitch" destination="CV6-BL-5aD" id="ElM-YM-lQP"/>
+            </connections>
+            <point key="canvasLocation" x="-20.610687022900763" y="30.985915492957748"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

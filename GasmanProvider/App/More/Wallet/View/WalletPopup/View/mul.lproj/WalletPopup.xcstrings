@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "1xW-cO-WzS.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Confirm\"; ObjectID = \"1xW-cO-WzS\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Confirm"
+          }
+        }
+      }
+    },
+    "cbn-bO-CLP.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Charge\"; ObjectID = \"cbn-bO-CLP\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Charge"
+          }
+        }
+      }
+    },
+    "JLX-L5-fgm.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Charge\"; ObjectID = \"JLX-L5-fgm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Charge"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

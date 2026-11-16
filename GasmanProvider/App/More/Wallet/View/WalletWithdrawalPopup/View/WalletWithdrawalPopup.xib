@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletWithdrawalPopup" customModule="GasMan" customModuleProvider="target">
+            <connections>
+                <outlet property="accountNumTextField" destination="915-yt-DHO" id="xgv-WF-yxq"/>
+                <outlet property="backView" destination="Cof-Hr-SoU" id="zKt-qC-LRv"/>
+                <outlet property="banknameTextField" destination="e1q-um-Ddo" id="VXD-Su-k2d"/>
+                <outlet property="contentView" destination="kUJ-7c-lyZ" id="YD8-3m-nMK"/>
+                <outlet property="ibanTextField" destination="vhz-Tj-MY8" id="Fcl-64-xV0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="withdrawAmountTextField" destination="3KI-K3-hdM" id="D5k-ep-Ol1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cof-Hr-SoU" userLabel="BackView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUJ-7c-lyZ" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="461.66666666666674" width="393" height="390.33333333333326"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mjz-bM-ECy" userLabel="ContainerStackView">
+                            <rect key="frame" x="16" y="24" width="361" height="342.33333333333331"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3K-As-BuO">
+                                    <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="withdraw"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjT-Pr-b1m">
+                                    <rect key="frame" x="0.0" y="39.999999999999943" width="41" height="14.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="withdraw_now"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0DC-Wg-hVw" userLabel="AmountTextFieldStackView">
+                                    <rect key="frame" x="0.0" y="70.333333333333314" width="361" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3KI-K3-hdM" userLabel="withdrawAmountTextField">
+                                            <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                            <color key="tintColor" name="Main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="ODD-f2-PFK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="withdraw_amount"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i8u-yB-UhD" userLabel="BankNameTextFieldStackView">
+                                    <rect key="frame" x="0.0" y="130.33333333333331" width="361" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1q-um-Ddo" userLabel="banknameTextField">
+                                            <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                            <color key="tintColor" name="Main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Nvl-F7-rrG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="bank_name"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aiA-sf-Omh" userLabel="AccountNumTextFieldStackView">
+                                    <rect key="frame" x="0.0" y="190.33333333333331" width="361" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="915-yt-DHO" userLabel="accountNumTextField">
+                                            <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                            <color key="tintColor" name="Main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="E8p-zm-guk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="bank_account_number"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qUh-G3-q9S" userLabel="IBANTextFieldStackView">
+                                    <rect key="frame" x="0.0" y="250.33333333333331" width="361" height="44"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-Tj-MY8" userLabel="ibanTextField">
+                                            <rect key="frame" x="8" y="0.0" width="345" height="44"/>
+                                            <color key="tintColor" name="Main"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Atk-2i-A3G"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibPlaceholderLocKey" value="iban_number"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtCornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="rtBorderColor">
+                                            <color key="value" name="TextFieldBorder"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rtBorderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiD-9r-Dzn" customClass="MainButton" customModule="GasMan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="310.33333333333331" width="361" height="32"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Confirm">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="withdraw_now"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="P54-90-VIF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="i8u-yB-UhD" firstAttribute="leading" secondItem="mjz-bM-ECy" secondAttribute="leading" id="0QN-zW-EJJ"/>
+                                <constraint firstAttribute="trailing" secondItem="hiD-9r-Dzn" secondAttribute="trailing" id="6Rg-q8-V0p"/>
+                                <constraint firstItem="hiD-9r-Dzn" firstAttribute="leading" secondItem="mjz-bM-ECy" secondAttribute="leading" id="9wT-vt-I3S"/>
+                                <constraint firstAttribute="trailing" secondItem="i8u-yB-UhD" secondAttribute="trailing" id="Dlx-UZ-STf"/>
+                                <constraint firstItem="aiA-sf-Omh" firstAttribute="leading" secondItem="mjz-bM-ECy" secondAttribute="leading" id="G9d-Vn-Prb"/>
+                                <constraint firstItem="0DC-Wg-hVw" firstAttribute="leading" secondItem="mjz-bM-ECy" secondAttribute="leading" id="Ngg-wg-0WV"/>
+                                <constraint firstAttribute="trailing" secondItem="aiA-sf-Omh" secondAttribute="trailing" id="Oya-q4-9KJ"/>
+                                <constraint firstAttribute="trailing" secondItem="0DC-Wg-hVw" secondAttribute="trailing" id="m8P-cJ-s8d"/>
+                                <constraint firstItem="qUh-G3-q9S" firstAttribute="leading" secondItem="mjz-bM-ECy" secondAttribute="leading" id="mLC-Us-y7X"/>
+                                <constraint firstAttribute="trailing" secondItem="qUh-G3-q9S" secondAttribute="trailing" id="nGY-el-3iO"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="MainBackGround"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mjz-bM-ECy" secondAttribute="trailing" constant="16" id="4Te-fb-eqE"/>
+                        <constraint firstItem="mjz-bM-ECy" firstAttribute="top" secondItem="kUJ-7c-lyZ" secondAttribute="top" constant="24" id="Zzz-ZP-aYU"/>
+                        <constraint firstAttribute="bottom" secondItem="mjz-bM-ECy" secondAttribute="bottom" constant="24" id="jSc-9d-Neu"/>
+                        <constraint firstItem="mjz-bM-ECy" firstAttribute="leading" secondItem="kUJ-7c-lyZ" secondAttribute="leading" constant="16" id="k2L-a6-izC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kUJ-7c-lyZ" secondAttribute="bottom" id="60N-HT-1Oi"/>
+                <constraint firstItem="Cof-Hr-SoU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ksv-FR-pVr"/>
+                <constraint firstAttribute="bottom" secondItem="Cof-Hr-SoU" secondAttribute="bottom" id="SmZ-6t-Ao8"/>
+                <constraint firstItem="Cof-Hr-SoU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XdQ-nr-9No"/>
+                <constraint firstItem="Cof-Hr-SoU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Zpx-I8-hfG"/>
+                <constraint firstItem="kUJ-7c-lyZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bGl-eX-pLW"/>
+                <constraint firstItem="kUJ-7c-lyZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="we1-M7-ITH"/>
+            </constraints>
+            <point key="canvasLocation" x="-89" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.93333333333333335" green="0.47843137254901963" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBackGround">
+            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TextFieldBorder">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

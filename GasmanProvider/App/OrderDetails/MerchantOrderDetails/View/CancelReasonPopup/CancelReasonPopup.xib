@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CancelReasonPopup" customModule="GasMan" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="CRP-back-btn" id="CRP-back-btn-conn"/>
+                <outlet property="backView" destination="CRP-backdrop" id="CRP-backdrop-conn"/>
+                <outlet property="contentView" destination="CRP-content" id="CRP-content-conn"/>
+                <outlet property="tableView" destination="CRP-table" id="CRP-table-conn"/>
+                <outlet property="view" destination="CRP-root" id="CRP-root-conn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CRP-root">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-backdrop" userLabel="BackView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-content" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="540.66666666666663" width="393" height="311.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-container" userLabel="ContainerStackView">
+                            <rect key="frame" x="16" y="16" width="361" height="279.33333333333331"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cancel_reason" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-title" userLabel="TitleLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="19.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="cancel_reason"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="200" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-table" customClass="TableViewContentSized" customModule="GasMan" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="27.333333333333371" width="361" height="200"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-btns" userLabel="ButtonsStackView">
+                                    <rect key="frame" x="0.0" y="235.33333333333337" width="361" height="44"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-back-btn" userLabel="backButton">
+                                            <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="CRP-back-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="back"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="back"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="CRP-back-action"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRP-confirm-btn" userLabel="confirmButton" customClass="RedButton" customModule="GasMan" customModuleProvider="target">
+                                            <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="CRP-confirm-h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="cancel_order"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="cancel_order"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didTapConfirm:" destination="-1" eventType="touchUpInside" id="CRP-confirm-action"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="CRP-container" secondAttribute="bottom" constant="16" id="CRP-cont-bot"/>
+                        <constraint firstItem="CRP-container" firstAttribute="leading" secondItem="CRP-content" secondAttribute="leading" constant="16" id="CRP-cont-lead"/>
+                        <constraint firstItem="CRP-container" firstAttribute="top" secondItem="CRP-content" secondAttribute="top" constant="16" id="CRP-cont-top"/>
+                        <constraint firstAttribute="trailing" secondItem="CRP-container" secondAttribute="trailing" constant="16" id="CRP-cont-trail"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="CRP-safe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="CRP-backdrop" secondAttribute="bottom" id="CRP-bd-bot"/>
+                <constraint firstItem="CRP-backdrop" firstAttribute="leading" secondItem="CRP-safe" secondAttribute="leading" id="CRP-bd-lead"/>
+                <constraint firstItem="CRP-backdrop" firstAttribute="top" secondItem="CRP-root" secondAttribute="top" id="CRP-bd-top"/>
+                <constraint firstAttribute="trailing" secondItem="CRP-backdrop" secondAttribute="trailing" id="CRP-bd-trail"/>
+                <constraint firstAttribute="bottom" secondItem="CRP-content" secondAttribute="bottom" id="CRP-cv-bot"/>
+                <constraint firstItem="CRP-content" firstAttribute="leading" secondItem="CRP-safe" secondAttribute="leading" id="CRP-cv-lead"/>
+                <constraint firstAttribute="trailing" secondItem="CRP-content" secondAttribute="trailing" id="CRP-cv-trail"/>
+            </constraints>
+            <point key="canvasLocation" x="-111" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

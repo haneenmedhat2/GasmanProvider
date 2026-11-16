@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B260B432F5D6F0D00F227A1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B422F5D6F0D00F227A1 /* FirebaseAnalytics */; };
+		6B260B452F5D6F0D00F227A1 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B442F5D6F0D00F227A1 /* FirebaseAnalyticsCore */; };
+		6B260B472F5D6F0D00F227A1 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B462F5D6F0D00F227A1 /* FirebaseAppCheck */; };
+		6B260B492F5D6F0D00F227A1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B482F5D6F0D00F227A1 /* FirebaseAuth */; };
+		6B260B4B2F5D6F0D00F227A1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B4A2F5D6F0D00F227A1 /* FirebaseCore */; };
+		6B260B4D2F5D6F0D00F227A1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B4C2F5D6F0D00F227A1 /* FirebaseDatabase */; };
+		6B260B4F2F5D6F0D00F227A1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B4E2F5D6F0D00F227A1 /* FirebaseFirestore */; };
+		6B260B512F5D6F0D00F227A1 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B502F5D6F0D00F227A1 /* FirebaseFunctions */; };
+		6B260B532F5D6F0D00F227A1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B522F5D6F0D00F227A1 /* FirebaseInstallations */; };
+		6B260B552F5D6F0D00F227A1 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B542F5D6F0D00F227A1 /* FirebaseMessaging */; };
+		6B260B572F5D6F0D00F227A1 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B562F5D6F0D00F227A1 /* FirebasePerformance */; };
+		6B260B592F5D6F0D00F227A1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B582F5D6F0D00F227A1 /* FirebaseStorage */; };
+		6B260B5C2F5D6F3A00F227A1 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B5B2F5D6F3A00F227A1 /* GoogleMaps */; };
+		6B260B5F2F5D6F7C00F227A1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B5E2F5D6F7C00F227A1 /* Alamofire */; };
+		6B260B622F5D6F9B00F227A1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B612F5D6F9B00F227A1 /* Kingfisher */; };
+		6B260B652F5D6FB300F227A1 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260B642F5D6FB300F227A1 /* Cosmos */; };
+		6B260F022F5D736800F227A1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260F012F5D736800F227A1 /* SDWebImage */; };
+		6B260F042F5D736800F227A1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260F032F5D736800F227A1 /* SDWebImageMapKit */; };
+		6B260F072F5D738200F227A1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6B260F062F5D738200F227A1 /* Lottie */; };
+		6BA6D72B2F5E102D0017C533 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BA6D72A2F5E102D0017C533 /* IQKeyboardManagerSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B26030C2F5D6BC200F227A1 /* GasmanProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasmanProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6B26031E2F5D6BC300F227A1 /* Exceptions for "GasmanProvider" folder in "GasmanProvider" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6B26030B2F5D6BC200F227A1 /* GasmanProvider */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B26030E2F5D6BC200F227A1 /* GasmanProvider */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6B26031E2F5D6BC300F227A1 /* Exceptions for "GasmanProvider" folder in "GasmanProvider" target */,
+			);
+			path = GasmanProvider;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B2603092F5D6BC200F227A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B260B572F5D6F0D00F227A1 /* FirebasePerformance in Frameworks */,
+				6B260B5F2F5D6F7C00F227A1 /* Alamofire in Frameworks */,
+				6B260B4D2F5D6F0D00F227A1 /* FirebaseDatabase in Frameworks */,
+				6B260B432F5D6F0D00F227A1 /* FirebaseAnalytics in Frameworks */,
+				6B260B552F5D6F0D00F227A1 /* FirebaseMessaging in Frameworks */,
+				6BA6D72B2F5E102D0017C533 /* IQKeyboardManagerSwift in Frameworks */,
+				6B260B4B2F5D6F0D00F227A1 /* FirebaseCore in Frameworks */,
+				6B260B592F5D6F0D00F227A1 /* FirebaseStorage in Frameworks */,
+				6B260F072F5D738200F227A1 /* Lottie in Frameworks */,
+				6B260B532F5D6F0D00F227A1 /* FirebaseInstallations in Frameworks */,
+				6B260B512F5D6F0D00F227A1 /* FirebaseFunctions in Frameworks */,
+				6B260B622F5D6F9B00F227A1 /* Kingfisher in Frameworks */,
+				6B260F042F5D736800F227A1 /* SDWebImageMapKit in Frameworks */,
+				6B260B652F5D6FB300F227A1 /* Cosmos in Frameworks */,
+				6B260B5C2F5D6F3A00F227A1 /* GoogleMaps in Frameworks */,
+				6B260B472F5D6F0D00F227A1 /* FirebaseAppCheck in Frameworks */,
+				6B260B452F5D6F0D00F227A1 /* FirebaseAnalyticsCore in Frameworks */,
+				6B260B492F5D6F0D00F227A1 /* FirebaseAuth in Frameworks */,
+				6B260B4F2F5D6F0D00F227A1 /* FirebaseFirestore in Frameworks */,
+				6B260F022F5D736800F227A1 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B2603032F5D6BC200F227A1 = {
+			isa = PBXGroup;
+			children = (
+				6B26030E2F5D6BC200F227A1 /* GasmanProvider */,
+				6B26030D2F5D6BC200F227A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B26030D2F5D6BC200F227A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B26030C2F5D6BC200F227A1 /* GasmanProvider.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B26030B2F5D6BC200F227A1 /* GasmanProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B26031F2F5D6BC300F227A1 /* Build configuration list for PBXNativeTarget "GasmanProvider" */;
+			buildPhases = (
+				6B2603082F5D6BC200F227A1 /* Sources */,
+				6B2603092F5D6BC200F227A1 /* Frameworks */,
+				6B26030A2F5D6BC200F227A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6B26030E2F5D6BC200F227A1 /* GasmanProvider */,
+			);
+			name = GasmanProvider;
+			packageProductDependencies = (
+				6B260B422F5D6F0D00F227A1 /* FirebaseAnalytics */,
+				6B260B442F5D6F0D00F227A1 /* FirebaseAnalyticsCore */,
+				6B260B462F5D6F0D00F227A1 /* FirebaseAppCheck */,
+				6B260B482F5D6F0D00F227A1 /* FirebaseAuth */,
+				6B260B4A2F5D6F0D00F227A1 /* FirebaseCore */,
+				6B260B4C2F5D6F0D00F227A1 /* FirebaseDatabase */,
+				6B260B4E2F5D6F0D00F227A1 /* FirebaseFirestore */,
+				6B260B502F5D6F0D00F227A1 /* FirebaseFunctions */,
+				6B260B522F5D6F0D00F227A1 /* FirebaseInstallations */,
+				6B260B542F5D6F0D00F227A1 /* FirebaseMessaging */,
+				6B260B562F5D6F0D00F227A1 /* FirebasePerformance */,
+				6B260B582F5D6F0D00F227A1 /* FirebaseStorage */,
+				6B260B5B2F5D6F3A00F227A1 /* GoogleMaps */,
+				6B260B5E2F5D6F7C00F227A1 /* Alamofire */,
+				6B260B612F5D6F9B00F227A1 /* Kingfisher */,
+				6B260B642F5D6FB300F227A1 /* Cosmos */,
+				6B260F012F5D736800F227A1 /* SDWebImage */,
+				6B260F032F5D736800F227A1 /* SDWebImageMapKit */,
+				6B260F062F5D738200F227A1 /* Lottie */,
+				6BA6D72A2F5E102D0017C533 /* IQKeyboardManagerSwift */,
+			);
+			productName = GasmanProvider;
+			productReference = 6B26030C2F5D6BC200F227A1 /* GasmanProvider.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B2603042F5D6BC200F227A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					6B26030B2F5D6BC200F227A1 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+				};
+			};
+			buildConfigurationList = 6B2603072F5D6BC200F227A1 /* Build configuration list for PBXProject "GasmanProvider" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = 6B2603032F5D6BC200F227A1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6B260B5A2F5D6F3A00F227A1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+				6B260B5D2F5D6F7C00F227A1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6B260B602F5D6F9B00F227A1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6B260B632F5D6FB300F227A1 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				6B260F002F5D736800F227A1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				6B260F052F5D738200F227A1 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				6BA6D7292F5E102D0017C533 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6B26030D2F5D6BC200F227A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B26030B2F5D6BC200F227A1 /* GasmanProvider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B26030A2F5D6BC200F227A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B2603082F5D6BC200F227A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B2603202F5D6BC300F227A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GasmanProvider/GasmanProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BVZ9794FDX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasmanProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "GasmanProvider App";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Use Face ID to sign in to your account";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaitApp.GasmanProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6B2603212F5D6BC300F227A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GasmanProvider/GasmanProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BVZ9794FDX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GasmanProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "GasmanProvider App";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Use Face ID to sign in to your account";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaitApp.GasmanProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6B2603222F5D6BC300F227A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZUMG9R88LL;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B2603232F5D6BC300F227A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZUMG9R88LL;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B2603072F5D6BC200F227A1 /* Build configuration list for PBXProject "GasmanProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2603222F5D6BC300F227A1 /* Debug */,
+				6B2603232F5D6BC300F227A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B26031F2F5D6BC300F227A1 /* Build configuration list for PBXNativeTarget "GasmanProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B2603202F5D6BC300F227A1 /* Debug */,
+				6B2603212F5D6BC300F227A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.10.0;
+			};
+		};
+		6B260B5A2F5D6F3A00F227A1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.10.0;
+			};
+		};
+		6B260B5D2F5D6F7C00F227A1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		6B260B602F5D6F9B00F227A1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.8.0;
+			};
+		};
+		6B260B632F5D6FB300F227A1 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
+		6B260F002F5D736800F227A1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.7;
+			};
+		};
+		6B260F052F5D738200F227A1 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.0;
+			};
+		};
+		6BA6D7292F5E102D0017C533 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B260B422F5D6F0D00F227A1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		6B260B442F5D6F0D00F227A1 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+		6B260B462F5D6F0D00F227A1 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		6B260B482F5D6F0D00F227A1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6B260B4A2F5D6F0D00F227A1 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		6B260B4C2F5D6F0D00F227A1 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		6B260B4E2F5D6F0D00F227A1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6B260B502F5D6F0D00F227A1 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		6B260B522F5D6F0D00F227A1 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		6B260B542F5D6F0D00F227A1 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		6B260B562F5D6F0D00F227A1 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		6B260B582F5D6F0D00F227A1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B412F5D6F0D00F227A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6B260B5B2F5D6F3A00F227A1 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B5A2F5D6F3A00F227A1 /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		6B260B5E2F5D6F7C00F227A1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B5D2F5D6F7C00F227A1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6B260B612F5D6F9B00F227A1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B602F5D6F9B00F227A1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		6B260B642F5D6FB300F227A1 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260B632F5D6FB300F227A1 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+		6B260F012F5D736800F227A1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260F002F5D736800F227A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		6B260F032F5D736800F227A1 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260F002F5D736800F227A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		6B260F062F5D738200F227A1 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B260F052F5D738200F227A1 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		6BA6D72A2F5E102D0017C533 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BA6D7292F5E102D0017C533 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6B2603042F5D6BC200F227A1 /* Project object */;
+}

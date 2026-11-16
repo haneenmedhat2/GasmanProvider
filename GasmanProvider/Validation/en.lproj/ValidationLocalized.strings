@@ -1,0 +1,186 @@
+/* 
+  ValidationLocalized.strings
+
+ //  Created by MGAbouarab®
+  
+*/
+
+//MARK: - Name -
+"Please enter first name." = "Please enter your first name.";
+"First name is too short." = "First name must be at least 2 characters long.";
+"First name is too long." = "First name exceeds the maximum allowed length.";
+"Please enter last name." = "Please enter your last name.";
+"Last name is too short." = "Last name must be at least 2 characters long.";
+"Last name is too long." = "Last name exceeds the maximum allowed length.";
+"Please enter family name." = "Please enter your family name.";
+"Family name is too short." = "Family name must be at least 2 characters long.";
+"Family name is too long." = "Family name exceeds the maximum allowed length.";
+"Please enter full name." = "Please enter your full name.";
+"Full name is too short." = "Full name must be at least 2 characters long.";
+"Full name is too long." = "Full name exceeds the maximum allowed length.";
+"Please enter name." = "Please enter the client name.";
+"Name is too short." = "Client name must be at least 2 characters long.";
+"Name is too long." = "Client name exceeds the maximum allowed length.";
+"Please enter store arabic name." = "Please enter the store name in Arabic.";
+"Store arabic name is too short." = "Store name in Arabic must be at least 2 characters long.";
+"Store arabic name is too long." = "Store name in Arabic exceeds the maximum allowed length.";
+"Please enter store english name." = "Please enter the store name in English.";
+"Store english name is too short." = "Store name in English must be at least 2 characters long.";
+"Store english name is too long." = "Store name in English exceeds the maximum allowed length.";
+"please_enter_username" = "Please enter your username";
+
+//MARK: - Phone -
+"Please enter your phone number." = "Please enter your phone number";
+"Phone number must be 9 or 10 digits" = "Phone number must be 9 or 10 digits";
+"Please enter correct whatsApp number." = "Please enter correct whatsApp number.";
+"invalid_saudi_phone" = "Please enter a valid Saudi mobile number starting with 5 or 05 and containing 9 or 10 digits";
+//MARK: - Verification Code -
+"Please enter verification code" = "Please enter verification code";
+"Verification Code should be 4 digits." = "Verification Code should be 4 digits.";
+
+//MARK: - Email -
+"Please enter email field." = "Please enter email field.";
+"Please enter correct email address." = "Invalid email. Please enter a valid email address such as example@gmail.com";
+
+//MARK: - Passwords -
+"Please enter password field." = "Please enter password";
+"Password is too short, it should be 6 characters at least." = "Password is too short, it should be 6 characters or numbers at least";
+"Please enter new password field." = "Please enter new password field.";
+"New password is too short, it should be 6 characters at least." = "New password is too short, it should be 6 characters or numbers at least.";
+"Please enter old password field." = "Please enter old password field.";
+"Old password is too short, it should be 6 characters at least." = "Old password is too short, it should be 6 characters or numbers at least.";
+"Please enter confirm new password field." = "Please enter confirm new password field.";
+"Please enter confirm password field." = "Please enter confirm password";
+"passwords_do_not_match" = "Password and confirm password do not match";
+"Please read and agree our terms and conditions first" = "Please read and agree our terms and conditions first";
+"empty_current_password" = "Please enter your current password";
+
+//MARK: - Locations -
+"Please select country." = "Please select country.";
+"Please select governorate" = "Please select governorate";
+"Please select city." = "Please select city.";
+"Please select the floor" = "Please select the floor";
+"Please select area." = "Please select area.";
+"Please enter street name." = "Please enter street name.";
+"Please enter address type." = "Please enter address type.";
+"Please select the location." = "Please select the location.";
+"Please write address details" = "Please write address details";
+"Please enter address name" = "Please enter address name" ;
+"Please enter building number" = "Please enter building number";
+//MARK: - Images -
+"Please pick cover picture." = "Please pick cover picture.";
+"Please pick your profile picture." = "Please pick your profile picture.";
+"Please pick license picture." = "Please pick license picture.";
+"Please pick product image." = "Please pick product image.";
+
+//MARK: - Cars -
+"Please pick car picture" = "Please pick car picture";
+"Please enter car plate number." = "Please enter car plate number.";
+"invalid_car_plate" = "License plate must be three numbers and three letters";
+"Please select car model." = "Please select car model.";
+"Please Select car type." = "Please Select car type.";
+
+//MARK: - Date -
+"Please enter the age." = "Please enter the age.";
+"If it is your age, please grow up first =D." = "If it is your age, please grow up first =D.";
+"Please selecte older date." = "Please selecte older date.";
+"Please selecte newer date." = "Please selecte newer date.";
+"Please select the date." = "Please select the date.";
+"Please select the time." = "Please select the time.";
+"Please choose a time to continue" = "Please choose a time to continue";
+//MARK: - Message -
+"Please enter message title" = "Please enter message title";
+"Please enter your message" = "Please enter your message";
+"Please enter message subject" = "Please enter message subject";
+"Please enter title type" = "Please enter title type";
+"Please choose contact reason" = "Please choose contact reason";
+
+//MARK: - Bank -
+"Please enter bank account holder name" = "Please enter bank account holder name";
+"Please enter bank name" = "Please enter bank name";
+"Please select bank transfer image" = "Please select bank transfer image";
+"Please enter from bank name" = "Please enter from bank name";
+"Please enter bank account number" = "Please enter bank account number";
+"Please enter IBAN number" = "Please enter IBAN number";
+"invalid_saudi_iban" = "Invalid IBAN. It must start with SA and contain 22 number ";
+//MARK: - category -
+"Please Select category" = "Please Select category";
+"Please enter price before" = "Please enter price before";
+"Please enter price after" = "Please enter price after";
+"price before is smaller than price after" = "price before is smaller than price after";
+"Please enter description" = "Please enter description";
+
+"Please select the topic" = "Please select the topic";
+"Please select the inquiry" = "Please select the inquiry";
+
+//MARK: - Empty Field -
+"Please select a service." = "Please select a service.";
+"empty_product_type" = "Please enter the product type";
+"empty_required_quantity" = "Please enter the required quantity";
+"empty_product_specifications" = "Please enter product specifications";
+"empty_payment_method" = "Please select a payment method";
+"Please choose to continue." = "Please choose to continue.";
+"Please select a language to continue" = "Please select a language to continue";
+//MARK: - Gender -
+"Please select a gender" = "Please select a gender";
+
+//MARK: - Complaint -
+"Please enter complaint title" = "Please enter complaint title";
+"Please enter complaint details" = "Please enter complaint description";
+"enter_complaint_reason" = "Please enter complaint reason";
+
+"Please enter your notes to continue" = "Please enter your notes to continue";
+"Please enter reason to continue" = "Please enter reason to continue";
+
+
+"Please rate by selecting stars" = "Please rate by selecting stars";
+
+
+//MARK: - Ratings -
+"empty_rating_stars" = "Please select your rating using the stars";
+"empty_rating_comment" = "Please write your comment";
+
+//MARK: - Wallet -
+"emptyAmount" = "Please enter the amount you want";
+"invalidAmount" = "The amount you entered is not valid";
+"withdrawAmount" = "Please enter withdrawall amount";
+
+//MARK: - Signup -
+"empty_identity_number" = "Please enter your identity number";
+"empty_vehicle_serial_number" = "Please enter the vehicle serial number";
+"invalid_vehicle_serial_number" = "Vehicle serial number must be 4 to 17 digits";
+"empty_delegate_company" = "Please select the delegate company";
+"empty_provider" = "Please select the merchant";
+"empty_driver_identity_image" = "Please upload the driver identity image";
+"empty_driver_identity_end_date" = "Please select the driver identity expiry date";
+"empty_vehicle_operating_license_image" = "Please upload the vehicle operating license image";
+"empty_vehicle_operating_license_end_date" = "Please select the vehicle operating license expiry date";
+"empty_national_identity_image" = "Please upload the national identity image";
+"empty_identity_image_end_date" = "Please select the national identity expiry date";
+"empty_vehicle_registration_image" = "Please upload the vehicle registration license image";
+"empty_vehicle_registration_license_date" = "Please select the vehicle registration license date";
+"empty_driving_license_image" = "Please upload the driving license image";
+"empty_driving_license_end_date" = "Please select the driving license expiry date";
+"empty_vehicle_insurance_image" = "Please upload the vehicle insurance image";
+"empty_vehicle_insurance_end_date" = "Please select the vehicle insurance expiry date";
+"empty_periodic_check_up_image" = "Please upload the periodic check-up image";
+"empty_periodic_check_up_date" = "Please select the periodic check-up date";
+"empty_other_image" = "Please upload the other image";
+"empty_vehicle_front_image" = "Please upload the vehicle front image";
+"empty_vehicle_back_image" = "Please upload the vehicle back image";
+"empty_vehicle_right_image" = "Please upload the vehicle right side image";
+"empty_vehicle_left_image" = "Please upload the vehicle left side image";
+"empty_store_name" = "Please enter brand name";
+"short_store_name" = "Brand name is too short";
+"long_store_name" = "Brand name is too long";
+"empty_commercial_number" = "Please enter commercial registration / residence number";
+"empty_commercial_image" = "Please attach commercial registration image";
+"empty_permission_image" = "Please attach permission image";
+"empty_provider_identity_image" = "Please attach identity / residence image";
+"empty_commercial_end_date" = "Please enter commercial registration expiry date";
+"empty_tax_number" = "Please enter the tax number";
+"empty_establishment_name" = "Please enter the establishment name";
+"empty_permission_end_date" = "Please enter permission expiry date";
+"image_upload_in_progress" = "Please wait until the image finishes uploading";
+
+
